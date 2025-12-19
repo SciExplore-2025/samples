@@ -321,6 +321,17 @@
             color: #7F7F7F;
         }
         
+        .author-link {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .author-link:hover {
+            color: #E17A41;
+            text-decoration: underline;
+        }
+        
         /* ردیف آیکون‌های تعاملی */
         .action-icons-row {
             display: flex;
@@ -419,6 +430,57 @@
             padding: 12px 15px;
             border-radius: 8px;
             border-right: 3px solid #4CAF50;
+        }
+        
+        /* بخش ادعای نویسندگی */
+        .claim-section {
+            background-color: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            border: 1px solid #4CAF50;
+        }
+        
+        .claim-section .sidebar-title {
+            border-bottom: 2px solid #4CAF50;
+        }
+        
+        .claim-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            font-family: inherit;
+            font-weight: 600;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .claim-button:hover {
+            background-color: #3d8b40;
+        }
+        
+        .claim-info {
+            background-color: #F0FFF0;
+            border: 1px solid #D4EDDA;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .claim-info p {
+            color: #5A5A5A;
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 0;
         }
         
         /* شناسه‌ها و لینک‌ها */
@@ -562,6 +624,149 @@
             font-size: 14px;
         }
         
+        /* Modal ادعای نویسندگی */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+        
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .modal-content {
+            background-color: white;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+            transform: translateY(-20px);
+            transition: transform 0.3s;
+        }
+        
+        .modal-overlay.active .modal-content {
+            transform: translateY(0);
+        }
+        
+        .modal-header {
+            padding: 20px;
+            border-bottom: 1px solid #EEE;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .modal-title {
+            color: #333;
+            font-size: 20px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #7F7F7F;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 4px;
+        }
+        
+        .modal-close:hover {
+            color: #E17A41;
+            background-color: #F5F5F5;
+        }
+        
+        .modal-body {
+            padding: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            color: #5A5A5A;
+            font-weight: 500;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #DDD;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+        
+        .form-note {
+            color: #7F7F7F;
+            font-size: 13px;
+            margin-top: 5px;
+            line-height: 1.4;
+        }
+        
+        .modal-footer {
+            padding: 20px;
+            border-top: 1px solid #EEE;
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border-radius: 6px;
+            border: none;
+            font-family: inherit;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #3d8b40;
+        }
+        
+        .btn-secondary {
+            background-color: #7F7F7F;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #666;
+        }
+        
         /* واکنش‌گرایی */
         @media (max-width: 900px) {
             .main-header {
@@ -617,6 +822,10 @@
                 margin-left: 0;
                 min-width: auto;
             }
+            
+            .modal-content {
+                width: 95%;
+            }
         }
         
         @media (max-width: 600px) {
@@ -638,6 +847,14 @@
             
             .action-icon span {
                 font-size: 12px;
+            }
+            
+            .modal-footer {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
             }
         }
     </style>
@@ -727,7 +944,9 @@
                                 <div class="author-item">
                                     <span class="author-name">
                                         <span class="corresponding-badge">نویسنده مسئول</span>
-                                        دکتر سارا احمدی
+                                        <a href="profile-sara-ahmadi.html" class="author-link">
+                                            دکتر سارا احمدی
+                                        </a>
                                         <span class="profile-indicator has-profile">
                                             <i class="fas fa-user-circle"></i>
                                         </span>
@@ -735,7 +954,9 @@
                                 </div>
                                 <div class="author-item">
                                     <span class="author-name">
-                                        دکتر امیر محمدی
+                                        <a href="profile-amir-mohammadi.html" class="author-link">
+                                            دکتر امیر محمدی
+                                        </a>
                                         <span class="profile-indicator has-profile">
                                             <i class="fas fa-user-circle"></i>
                                         </span>
@@ -751,7 +972,9 @@
                                 </div>
                                 <div class="author-item">
                                     <span class="author-name">
-                                        دکتر محمد حسینی
+                                        <a href="profile-mohammad-hosseini.html" class="author-link">
+                                            دکتر محمد حسینی
+                                        </a>
                                         <span class="profile-indicator has-profile">
                                             <i class="fas fa-user-circle"></i>
                                         </span>
@@ -843,6 +1066,24 @@
                     </div>
                     <p style="color: #7F7F7F; font-size: 14px; margin-top: 10px; line-height: 1.5;">
                         این مقاله تحت مجوز CC BY 4.0 منتشر شده است.
+                    </p>
+                </div>
+                
+                <!-- بخش ادعای نویسندگی -->
+                <div class="sidebar-block claim-section">
+                    <h3 class="sidebar-title">
+                        <i class="fas fa-user-check" style="color: #4CAF50;"></i>
+                        ادعای نویسندگی
+                    </h3>
+                    <div class="claim-info">
+                        <p>اگر نویسنده این مقاله هستید، می‌توانید مالکیت خود را تأیید کنید.</p>
+                    </div>
+                    <button class="claim-button" onclick="openClaimForm()">
+                        <i class="fas fa-user-check"></i>
+                        ادعای نویسندگی این مقاله
+                    </button>
+                    <p style="color: #7F7F7F; font-size: 12px; margin-top: 10px; line-height: 1.4; text-align: center;">
+                        <i class="fas fa-info-circle"></i> پس از تأیید، پروفایل شما به مقاله متصل می‌شود.
                     </p>
                 </div>
                 
@@ -1017,6 +1258,53 @@
         </div>
     </div>
     
+    <!-- Modal ادعای نویسندگی -->
+    <div class="modal-overlay" id="claimModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">
+                    <i class="fas fa-user-check" style="color: #4CAF50;"></i>
+                    فرم ادعای نویسندگی
+                </h3>
+                <button class="modal-close" onclick="closeClaimForm()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">نام شما در مقاله:</label>
+                    <input type="text" class="form-input" id="claimName" value="دکتر سارا احمدی" readonly>
+                    <p class="form-note">نام شما همان‌طور که در مقاله ذکر شده است.</p>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">ایمیل شما:</label>
+                    <input type="email" class="form-input" id="claimEmail" placeholder="example@email.com" required>
+                    <p class="form-note">ایمیل برای تأیید و ارتباط با شما استفاده می‌شود.</p>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">ایمیل هم‌کاران (اختیاری):</label>
+                    <input type="text" class="form-input" id="claimCoauthors" placeholder="email1, email2, ...">
+                    <p class="form-note">ایمیل سایر نویسندگان مقاله (با کاما جدا شود).</p>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">سند اثبات (اختیاری):</label>
+                    <input type="file" class="form-input" id="claimFile">
+                    <p class="form-note">می‌توانید فایل PDF مقاله یا مدارک مرتبط را آپلود کنید.</p>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">توضیحات اضافی (اختیاری):</label>
+                    <textarea class="form-input" id="claimNotes" rows="3" placeholder="توضیحات اضافی در مورد ادعای خود..."></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeClaimForm()">انصراف</button>
+                <button class="btn btn-primary" onclick="submitClaim()">ارسال درخواست</button>
+            </div>
+        </div>
+    </div>
+    
     <script>
         // تابع برای منوی هدر
         function toggleMenu() {
@@ -1053,6 +1341,57 @@
                 alert(`جست‌وجو برای "${query}" انجام شد`);
             }
         }
+        
+        // تابع برای باز کردن فرم ادعای نویسندگی
+        function openClaimForm() {
+            const modal = document.getElementById('claimModal');
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // جلوگیری از اسکرول صفحه اصلی
+        }
+        
+        // تابع برای بستن فرم ادعای نویسندگی
+        function closeClaimForm() {
+            const modal = document.getElementById('claimModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto'; // بازگرداندن اسکرول
+        }
+        
+        // تابع برای ارسال فرم ادعای نویسندگی
+        function submitClaim() {
+            const email = document.getElementById('claimEmail').value;
+            const name = document.getElementById('claimName').value;
+            
+            if (!email || !email.includes('@')) {
+                alert('لطفاً یک ایمیل معتبر وارد کنید.');
+                return;
+            }
+            
+            // نمایش پیام موفقیت
+            alert(`درخواست ادعای نویسندگی شما با موفقیت ثبت شد.\n\nنام: ${name}\nایمیل: ${email}\n\nایمیل تأیید به آدرس بالا ارسال خواهد شد.`);
+            
+            // بستن فرم
+            closeClaimForm();
+            
+            // ریست فرم (در حالت واقعی اینجا به سرور ارسال می‌شود)
+            document.getElementById('claimEmail').value = '';
+            document.getElementById('claimCoauthors').value = '';
+            document.getElementById('claimFile').value = '';
+            document.getElementById('claimNotes').value = '';
+        }
+        
+        // بستن modal با کلیک خارج از آن
+        document.getElementById('claimModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeClaimForm();
+            }
+        });
+        
+        // بستن modal با کلید Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeClaimForm();
+            }
+        });
         
         // اسکریپت برای تعامل‌های صفحه
         
@@ -1113,7 +1452,15 @@
                 alert('نظر شما با موفقیت ثبت شد!');
             }
         });
+        
+        // رفتن به صفحه پروفایل نویسنده با کلیک روی نام
+        document.querySelectorAll('.author-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const authorName = this.textContent.trim();
+                console.log(`رفتن به پروفایل: ${authorName}`);
+                // در حالت واقعی، اینجا به صفحه پروفایل نویسنده هدایت می‌شود
+            });
+        });
     </script>
 </body>
-
 </html>
