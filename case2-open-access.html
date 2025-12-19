@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اطلاعات کامل - اثربخشی درمان شناختی-رفتاری بر کاهش علائم اضطراب اجتماعی - سای اکسپلور</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* استایل کلی */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Vazirmatn', sans-serif;
+        }
+        
+        body {
+            background-color: #F6F6F6;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* ========== هدر ========== */
+        .main-header {
+            height: 70px;
+            background: white;
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-part {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+        
+        .right-logo {
+            justify-content: flex-start;
+        }
+        
+        .center-search {
+            justify-content: center;
+        }
+        
+        .left-logo {
+            justify-content: flex-end;
+            gap: 20px;
+        }
+        
+        .header-menu {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            background: none;
+            border: none;
+            color: #7F7F7F;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 10px 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+        
+        .menu-toggle:hover {
+            background: #FEEBCA;
+            color: #E17A41;
+        }
+        
+        .menu-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 180px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s;
+            z-index: 1001;
+            border: 1px solid #eee;
+        }
+        
+        .menu-dropdown.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .menu-item {
+            display: block;
+            padding: 12px 20px;
+            color: #5A5A5A;
+            text-decoration: none;
+            transition: all 0.3s;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        
+        .menu-item:hover {
+            background: #FFF6E7;
+            color: #E17A41;
+            padding-right: 25px;
+        }
+        
+        .search-box {
+            width: 500px;
+            height: 50px;
+            border: 2px solid #7F7F7F;
+            border-radius: 25px;
+            display: flex;
+            overflow: hidden;
+            background: white;
+            margin-left: 15px;
+        }
+        
+        .search-input {
+            flex: 1;
+            border: none;
+            padding: 0 20px;
+            font-size: 16px;
+            outline: none;
+        }
+        
+        .search-button {
+            width: 50px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            color: #FCB42D;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .search-links-row {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .search-link {
+            color: #7F7F7F;
+            font-size: 13px;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        
+        .search-link:hover {
+            color: #E17A41;
+            text-decoration: underline;
+        }
+        
+        .logo {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ========== بخش ناوبری ========== */
+        .breadcrumb {
+            background-color: #F9F9F9;
+            padding: 15px 0;
+            border-bottom: 1px solid #EEE;
+            margin-bottom: 30px;
+        }
+        
+        .breadcrumb-content {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: #7F7F7F;
+        }
+        
+        .breadcrumb a {
+            color: #7F7F7F;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .breadcrumb a:hover {
+            color: #E17A41;
+            text-decoration: underline;
+        }
+        
+        .breadcrumb-separator {
+            color: #DDD;
+        }
+        
+        /* ========== بخش اصلی ========== */
+        .document-main {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        /* ستون چپ - اطلاعات اصلی */
+        .document-info {
+            flex: 3;
+            background-color: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            border: 1px solid #EEE;
+        }
+        
+        /* ستون راست - اطلاعات جانبی */
+        .document-sidebar {
+            flex: 1;
+            min-width: 280px;
+        }
+        
+        /* عنوان مدرک */
+        .document-title {
+            color: #333;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 25px;
+            border-right: 4px solid #FCB42D;
+            padding-right: 15px;
+        }
+        
+        /* اطلاعات استنادی */
+        .citation-info {
+            margin-bottom: 25px;
+        }
+        
+        .info-row {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: flex-start;
+        }
+        
+        .info-row:last-child {
+            margin-bottom: 0;
+        }
+        
+        .info-label {
+            color: #E17A41;
+            font-weight: 600;
+            min-width: 100px;
+            margin-left: 15px;
+        }
+        
+        .info-value {
+            color: #5A5A5A;
+            flex: 1;
+        }
+        
+        .author-names {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        .author-name {
+            display: block;
+        }
+        
+        .author-name-en {
+            font-family: 'Vazirmatn', sans-serif;
+            direction: ltr;
+            text-align: left;
+            color: #7F7F7F;
+            font-size: 14px;
+            margin-top: 2px;
+        }
+        
+        /* ردیف آیکون‌های تعاملی */
+        .action-icons-row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding-top: 25px;
+            margin-top: 25px;
+            border-top: 1px solid #EEE;
+            flex-wrap: wrap;
+        }
+        
+        .action-icon {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #5A5A5A;
+            text-decoration: none;
+            font-size: 15px;
+            transition: all 0.3s;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+        }
+        
+        .action-icon:hover {
+            background-color: #F5F5F5;
+            color: #333;
+            transform: translateY(-2px);
+        }
+        
+        .action-icon i {
+            font-size: 18px;
+        }
+        
+        .action-icon.pdf {
+            color: #2E7D32;
+            background-color: #F0FFF0;
+            border: 1px solid #D4EDDA;
+        }
+        
+        .action-icon.pdf:hover {
+            background-color: #E8F5E9;
+            color: #2E7D32;
+            transform: translateY(-2px);
+            box-shadow: 0 3px 8px rgba(46, 125, 50, 0.2);
+        }
+        
+        /* اعلان دسترسی آزاد */
+        .open-access-alert {
+            background-color: #F0FFF0;
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .open-access-icon {
+            color: #4CAF50;
+            font-size: 24px;
+        }
+        
+        .open-access-text h4 {
+            color: #2E7D32;
+            margin-bottom: 5px;
+        }
+        
+        .open-access-text p {
+            color: #5A5A5A;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        /* اطلاعات فایل */
+        .file-info {
+            background-color: #FFF6E7;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .file-details {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #7F7F7F;
+            font-size: 14px;
+        }
+        
+        .file-size {
+            background-color: #FEEBCA;
+            color: #E17A41;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-weight: 600;
+        }
+        
+        /* بلوک‌های سایدبار */
+        .sidebar-block {
+            background-color: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            border: 1px solid #EEE;
+        }
+        
+        .sidebar-title {
+            color: #333;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #FEEBCA;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* وضعیت دسترسی آزاد */
+        .open-access-status {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #4CAF50;
+            font-weight: 600;
+            background-color: #F0FFF0;
+            padding: 12px 15px;
+            border-radius: 8px;
+            border-right: 3px solid #4CAF50;
+        }
+        
+        /* شناسه‌ها و لینک‌ها */
+        .identifiers-list {
+            list-style: none;
+        }
+        
+        .identifiers-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .identifiers-list a {
+            color: #5A5A5A;
+            text-decoration: none;
+            word-break: break-all;
+        }
+        
+        .identifiers-list a:hover {
+            color: #E17A41;
+            text-decoration: underline;
+        }
+        
+        /* کلمات کلیدی لینک‌دار */
+        .keywords-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .keyword-link {
+            background-color: #FEEBCA;
+            color: #E17A41;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .keyword-link:hover {
+            background-color: #FCB42D;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 3px 8px rgba(252, 180, 45, 0.3);
+        }
+        
+        /* چکیده کامل */
+        .abstract-full {
+            background-color: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            border: 1px solid #EEE;
+        }
+        
+        .abstract-title {
+            color: #333;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #FEEBCA;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .abstract-text {
+            color: #5A5A5A;
+            line-height: 1.8;
+            text-align: justify;
+        }
+        
+        /* بخش‌های تکمیلی */
+        .document-sections {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .section-block {
+            background-color: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            border: 1px solid #EEE;
+        }
+        
+        .section-title {
+            color: #333;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #FEEBCA;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* جداول اطلاعات */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .info-table tr {
+            border-bottom: 1px solid #EEE;
+        }
+        
+        .info-table tr:last-child {
+            border-bottom: none;
+        }
+        
+        .info-table td {
+            padding: 12px 10px;
+            color: #5A5A5A;
+        }
+        
+        .info-table td:first-child {
+            font-weight: 600;
+            color: #7F7F7F;
+            min-width: 140px;
+        }
+        
+        /* بخش ارجاعات */
+        .references-section {
+            background-color: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            border: 1px solid #EEE;
+            margin-top: 20px;
+        }
+        
+        .reference-item {
+            padding: 10px 0;
+            border-bottom: 1px solid #EEE;
+            color: #5A5A5A;
+            line-height: 1.6;
+        }
+        
+        .reference-item:last-child {
+            border-bottom: none;
+        }
+        
+        .reference-number {
+            color: #E17A41;
+            font-weight: 600;
+            margin-left: 5px;
+        }
+        
+        /* پاورقی */
+        .footer {
+            background-color: #F9F9F9;
+            border-top: 1px solid #DDD;
+            padding: 30px 0;
+            margin-top: 50px;
+            color: #7F7F7F;
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        /* واکنش‌گرایی */
+        @media (max-width: 900px) {
+            .main-header {
+                padding: 0 20px;
+                height: auto;
+                flex-wrap: wrap;
+                padding: 15px 20px;
+            }
+            
+            .search-box {
+                width: 100%;
+                margin: 10px 0;
+            }
+            
+            .center-search {
+                order: 3;
+                width: 100%;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 10px;
+            }
+            
+            .search-links-row {
+                margin-top: 8px;
+            }
+            
+            .left-logo {
+                justify-content: space-between;
+                width: 100%;
+                order: 2;
+                margin-top: 10px;
+            }
+            
+            .document-main {
+                flex-direction: column;
+            }
+            
+            .document-title {
+                font-size: 24px;
+            }
+            
+            .action-icons-row {
+                justify-content: center;
+            }
+            
+            .info-row {
+                flex-direction: column;
+                gap: 5px;
+            }
+            
+            .info-label {
+                margin-left: 0;
+                min-width: auto;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .document-info, .sidebar-block, .abstract-full, .section-block {
+                padding: 20px;
+            }
+            
+            .action-icons-row {
+                gap: 10px;
+                justify-content: space-between;
+            }
+            
+            .action-icon {
+                flex-direction: column;
+                gap: 5px;
+                padding: 8px;
+                font-size: 13px;
+            }
+            
+            .action-icon span {
+                font-size: 12px;
+            }
+            
+            .file-info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- هدر -->
+    <header class="main-header">
+        <!-- بخش راست: منو + لوگوی ورود -->
+        <div class="header-part right-logo">
+            <!-- منو -->
+            <div class="header-menu">
+                <button class="menu-toggle" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                    منو
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="menu-dropdown" id="menuDropdown">
+                    <a href="#" class="menu-item">مقالات</a>
+                    <a href="#" class="menu-item">مجلات</a>
+                    <a href="#" class="menu-item">علم‌سنجی</a>
+                    <a href="#" class="menu-item">پروفایل‌ها</a>
+                </div>
+            </div>
+            
+            <!-- لوگوی ورود -->
+            <div class="logo">
+                <img src="loging icon.png" alt="ورود">
+            </div>
+        </div>
+        
+        <!-- بخش وسط: جست‌وجو -->
+        <div class="header-part center-search">
+            <div style="display: flex; align-items: center;">
+                <!-- باکس جست‌وجو -->
+                <div class="search-box">
+                    <input type="text" class="search-input" placeholder="جست‌وجو کنید...">
+                    <button class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                
+                <!-- لینک‌ها در کنار باکس -->
+                <div class="search-links-row">
+                    <a href="#" class="search-link">جست‌وجوی پیشرفته</a>
+                    <a href="#" class="search-link">راهنمای جست‌وجو</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- بخش چپ: لوگوی اصلی -->
+        <div class="header-part left-logo">
+            <div class="logo">
+                <img src="SX logo.jpg" alt="سای اکسپلور">
+            </div>
+        </div>
+    </header>
+    
+    <!-- بخش ناوبری -->
+    <div class="breadcrumb">
+        <div class="container">
+            <div class="breadcrumb-content">
+                <a href="#"><i class="fas fa-home"></i> صفحه اصلی</a>
+                <span class="breadcrumb-separator"><i class="fas fa-chevron-left"></i></span>
+                <a href="#">نتایج جست‌وجو</a>
+                <span class="breadcrumb-separator"><i class="fas fa-chevron-left"></i></span>
+                <span>اطلاعات کامل مدرک</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- محتوای اصلی -->
+    <div class="container">
+        <!-- بخش اصلی مدرک -->
+        <div class="document-main">
+            <!-- ستون چپ: اطلاعات اصلی -->
+            <div class="document-info">
+                <h1 class="document-title">
+                    اثربخشی درمان شناختی-رفتاری گروهی بر کاهش علائم اضطراب اجتماعی در دانشجویان
+                </h1>
+                
+                <!-- اطلاعات استنادی -->
+                <div class="citation-info">
+                    <div class="info-row">
+                        <div class="info-label">نویسنده(گان):</div>
+                        <div class="info-value">
+                            <div class="author-names">
+                                <span class="author-name">دکتر مریم کریمی</span>
+                                <span class="author-name-en">Dr. Maryam Karimi</span>
+                            </div>
+                            <div class="author-names" style="margin-top: 10px;">
+                                <span class="author-name">دکتر احمد محمدی</span>
+                                <span class="author-name-en">Dr. Ahmad Mohammadi</span>
+                            </div>
+                            <div class="author-names" style="margin-top: 10px;">
+                                <span class="author-name">دکتر سارا قربانی</span>
+                                <span class="author-name-en">Dr. Sara Ghorbani</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">منبع:</div>
+                        <div class="info-value">مجله روانشناسی سلامت ایران، دوره ۱۰، شماره ۳</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">نوع مدرک:</div>
+                        <div class="info-value">مقاله پژوهشی (ژورنال)</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">تاریخ انتشار:</div>
+                        <div class="info-value">بهار ۱۴۰۳</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">زبان:</div>
+                        <div class="info-value">فارسی</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">DOI:</div>
+                        <div class="info-value">10.5812/ijhp.124578</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">مجوز:</div>
+                        <div class="info-value">Creative Commons Attribution 4.0 International</div>
+                    </div>
+                </div>
+                
+                <!-- اعلان دسترسی آزاد -->
+                <div class="open-access-alert">
+                    <div class="open-access-icon">
+                        <i class="fas fa-lock-open"></i>
+                    </div>
+                    <div class="open-access-text">
+                        <h4>دسترسی آزاد به متن کامل</h4>
+                        <p>این مقاله تحت مجوز دسترسی آزاد منتشر شده است. می‌توانید متن کامل مقاله را به صورت رایگان دانلود و استفاده کنید.</p>
+                    </div>
+                </div>
+                
+                <!-- اطلاعات فایل -->
+                <div class="file-info">
+                    <div class="file-details">
+                        <i class="fas fa-file-pdf" style="color: #F44336;"></i>
+                        <span>فایل PDF مقاله</span>
+                        <span class="file-size">۳.۲ مگابایت</span>
+                    </div>
+                    <div class="file-details">
+                        <i class="fas fa-clock" style="color: #7F7F7F;"></i>
+                        <span>تاریخ انتشار: ۱۵ فروردین ۱۴۰۳</span>
+                    </div>
+                </div>
+                
+                <!-- ردیف آیکون‌های تعاملی -->
+                <div class="action-icons-row">
+                    <button class="action-icon pdf">
+                        <i class="fas fa-download"></i>
+                        <span>دانلود PDF</span>
+                    </button>
+                    
+                    <button class="action-icon">
+                        <i class="fas fa-quote-right"></i>
+                        <span>استناد</span>
+                    </button>
+                    
+                    <button class="action-icon">
+                        <i class="fas fa-share-alt"></i>
+                        <span>اشتراک‌گذاری</span>
+                    </button>
+                    
+                    <button class="action-icon">
+                        <i class="far fa-heart"></i>
+                        <span>لایک</span>
+                    </button>
+                    
+                    <button class="action-icon">
+                        <i class="far fa-comment"></i>
+                        <span>نظر</span>
+                    </button>
+                    
+                    <a href="https://scholar.google.com" target="_blank" class="action-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>گوگل اسکولار</span>
+                    </a>
+                    
+                    <a href="#" class="action-icon">
+                        <i class="fas fa-print"></i>
+                        <span>چاپ</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- ستون راست: سایدبار -->
+            <div class="document-sidebar">
+                <!-- وضعیت دسترسی -->
+                <div class="sidebar-block">
+                    <h3 class="sidebar-title">
+                        <i class="fas fa-lock-open" style="color: #4CAF50;"></i>
+                        وضعیت دسترسی
+                    </h3>
+                    <div class="open-access-status">
+                        <i class="fas fa-check-circle"></i>
+                        دسترسی آزاد کامل (Open Access)
+                    </div>
+                    <p style="color: #7F7F7F; font-size: 14px; margin-top: 10px; line-height: 1.5;">
+                        این مقاله تحت مجوز CC BY 4.0 منتشر شده است. استفاده، توزیع و تولید اثر با ذکر منبع آزاد است.
+                    </p>
+                </div>
+                
+                <!-- شناسه‌ها و لینک‌ها -->
+                <div class="sidebar-block">
+                    <h3 class="sidebar-title">
+                        <i class="fas fa-link"></i>
+                        شناسه‌ها و لینک‌ها
+                    </h3>
+                    <ul class="identifiers-list">
+                        <li>
+                            <i class="fas fa-hashtag" style="color: #7F7F7F;"></i>
+                            <span>کد مقاله: <strong>IJHP-2024-018</strong></span>
+                        </li>
+                        <li>
+                            <i class="fas fa-external-link-alt" style="color: #7F7F7F;"></i>
+                            <a href="https://doi.org/10.5812/ijhp.124578">https://doi.org/10.5812/ijhp.124578</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-archive" style="color: #7F7F7F;"></i>
+                            <a href="#">نسخه HTML مقاله</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-database" style="color: #7F7F7F;"></i>
+                            <span>پایگاه‌های نمایه‌سازی: PubMed, Google Scholar, SID</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- کلمات کلیدی لینک‌دار -->
+                <div class="sidebar-block">
+                    <h3 class="sidebar-title">
+                        <i class="fas fa-tags"></i>
+                        کلمات کلیدی
+                    </h3>
+                    <div class="keywords-container">
+                        <a href="#" class="keyword-link">درمان شناختی-رفتاری</a>
+                        <a href="#" class="keyword-link">اضطراب اجتماعی</a>
+                        <a href="#" class="keyword-link">دانشجویان</a>
+                        <a href="#" class="keyword-link">رواندرمانی گروهی</a>
+                        <a href="#" class="keyword-link">سلامت روان</a>
+                        <a href="#" class="keyword-link">مداخلات روانشناختی</a>
+                    </div>
+                </div>
+                
+                <!-- اطلاعات تکمیلی -->
+                <div class="sidebar-block">
+                    <h3 class="sidebar-title">
+                        <i class="fas fa-info-circle"></i>
+                        اطلاعات تکمیلی
+                    </h3>
+                    <table class="info-table">
+                        <tr>
+                            <td>صفحات:</td>
+                            <td>۱۵-۳۰</td>
+                        </tr>
+                        <tr>
+                            <td>استنادات:</td>
+                            <td>۲۴ استناد</td>
+                        </tr>
+                        <tr>
+                            <td>تعداد دانلود:</td>
+                            <td>۱,۲۴۵ بار</td>
+                        </tr>
+                        <tr>
+                            <td>تعداد بازدید:</td>
+                            <td>۳,۵۶۷ بار</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <!-- لایسنس -->
+                <div class="sidebar-block">
+                    <h3 class="sidebar-title">
+                        <i class="fas fa-balance-scale" style="color: #7F7F7F;"></i>
+                        مجوز استفاده
+                    </h3>
+                    <div style="background-color: #F0FFF0; padding: 15px; border-radius: 8px; border-right: 3px solid #4CAF50;">
+                        <p style="color: #2E7D32; font-size: 14px; margin-bottom: 10px;">
+                            <i class="fab fa-creative-commons"></i> CC BY 4.0
+                        </p>
+                        <p style="color: #5A5A5A; font-size: 13px; line-height: 1.5;">
+                            این مقاله تحت مجوز Creative Commons Attribution 4.0 International منتشر شده است. شما می‌توانید:
+                        </p>
+                        <ul style="color: #5A5A5A; font-size: 13px; padding-right: 20px; margin-top: 8px; line-height: 1.6;">
+                            <li>متن را کپی و توزیع کنید</li>
+                            <li>اثر جدیدی بر اساس این مقاله ایجاد کنید</li>
+                            <li>برای اهداف تجاری استفاده کنید</li>
+                        </ul>
+                        <p style="color: #7F7F7F; font-size: 12px; margin-top: 10px; font-style: italic;">
+                            * با ذکر نام نویسنده اصلی
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- چکیده کامل -->
+        <div class="abstract-full">
+            <h2 class="abstract-title">
+                <i class="fas fa-file-alt" style="color: #E17A41;"></i>
+                چکیده کامل
+            </h2>
+            <div class="abstract-text">
+                <p><strong>هدف:</strong> پژوهش حاضر با هدف بررسی اثربخشی درمان شناختی-رفتاری گروهی بر کاهش علائم اضطراب اجتماعی در دانشجویان دانشگاه‌های تهران انجام شد.</p>
+                
+                <p><strong>روش:</strong> این پژوهش از نوع نیمه آزمایشی با طرح پیش‌آزمون-پس‌آزمون با گروه کنترل بود. جامعه آماری شامل دانشجویان مراجعه‌کننده به مراکز مشاوره دانشگاه‌های تهران در سال تحصیلی ۱۴۰۲-۱۴۰۱ بود. از این جامعه، ۶۰ نفر به روش نمونه‌گیری در دسترس انتخاب و به صورت تصادفی در دو گروه آزمایش (۳۰ نفر) و کنترل (۳۰ نفر) جایگزین شدند. گروه آزمایش به مدت ۱۲ جلسه ۹۰ دقیقه‌ای تحت درمان شناختی-رفتاری گروهی قرار گرفتند، در حالی که گروه کنترل هیچ مداخله‌ای دریافت نکردند. ابزارهای پژوهش شامل پرسشنامه اضطراب اجتماعی لیبوویتز (LSAS)، پرسشنامه هراس اجتماعی (SPIN) و مقیاس باورهای غیرمنطقی (IBT) بود.</p>
+                
+                <p><strong>یافته‌ها:</strong> نتایج تحلیل کوواریانس چندمتغیره نشان داد که درمان شناختی-رفتاری گروهی به طور معناداری منجر به کاهش علائم اضطراب اجتماعی در گروه آزمایش در مقایسه با گروه کنترل شده است (۰.۰۰۱ > P). همچنین، تغییرات معناداری در باورهای غیرمنطقی و مهارت‌های اجتماعی شرکت‌کنندگان مشاهده شد. اثرات درمان در پیگیری سه ماهه نیز پایدار بود.</p>
+                
+                <p><strong>نتیجه‌گیری:</strong> درمان شناختی-رفتاری گروهی می‌تواند به عنوان یک مداخله مؤثر در کاهش علائم اضطراب اجتماعی و بهبود عملکرد اجتماعی دانشجویان مورد استفاده قرار گیرد. پیشنهاد می‌شود این نوع مداخله در مراکز مشاوره دانشگاه‌ها به صورت گسترده‌تری اجرا شود.</p>
+                
+                <p style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #EEE; color: #7F7F7F; font-style: italic;">
+                    <strong>کلیدواژه‌های اضافی:</strong> رواندرمانی، مداخلات دانشگاهی، سلامت روان دانشجویان، درمان گروهی
+                </p>
+            </div>
+        </div>
+        
+        <!-- بخش‌های تکمیلی -->
+        <div class="document-sections">
+            <!-- اطلاعات کتابشناختی کامل -->
+            <div class="section-block">
+                <h2 class="section-title">
+                    <i class="fas fa-book" style="color: #E17A41;"></i>
+                    اطلاعات کتابشناختی کامل
+                </h2>
+                <table class="info-table">
+                    <tr>
+                        <td>نام ژورنال:</td>
+                        <td>مجله روانشناسی سلامت ایران</td>
+                    </tr>
+                    <tr>
+                        <td>ناشر:</td>
+                        <td>انجمن روانشناسی سلامت ایران</td>
+                    </tr>
+                    <tr>
+                        <td>دوره/جلد:</td>
+                        <td>دوره ۱۰، شماره ۳</td>
+                    </tr>
+                    <tr>
+                        <td>تاریخ انتشار:</td>
+                        <td>بهار ۱۴۰۳</td>
+                    </tr>
+                    <tr>
+                        <td>شماره ISSN:</td>
+                        <td>۲۳۴۵-۴۳۲X</td>
+                    </tr>
+                    <tr>
+                        <td>صفحات مقاله:</td>
+                        <td>۱۵-۳۰</td>
+                    </tr>
+                    <tr>
+                        <td>نوع دسترسی:</td>
+                        <td>دسترسی آزاد (Open Access)</td>
+                    </tr>
+                    <tr>
+                        <td>مجوز:</td>
+                        <td>Creative Commons Attribution 4.0 International</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- اطلاعات فنی -->
+            <div class="section-block">
+                <h2 class="section-title">
+                    <i class="fas fa-cogs" style="color: #E17A41;"></i>
+                    اطلاعات فنی
+                </h2>
+                <table class="info-table">
+                    <tr>
+                        <td>تاریخ ورود به پایگاه:</td>
+                        <td>۲۰ فروردین ۱۴۰۳</td>
+                    </tr>
+                    <tr>
+                        <td>آخرین بروزرسانی:</td>
+                        <td>۱۵ اردیبهشت ۱۴۰۳</td>
+                    </tr>
+                    <tr>
+                        <td>قالب استناددهی:</td>
+                        <td>APA, Vancouver, Harvard, MLA</td>
+                    </tr>
+                    <tr>
+                        <td>رده‌بندی موضوعی:</td>
+                        <td>روانشناسی • علوم تربیتی • سلامت روان</td>
+                    </tr>
+                    <tr>
+                        <td>نوع فایل:</td>
+                        <td>PDF (با قابلیت جست‌وجوی متن)</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- ارجاعات مقاله -->
+            <div class="references-section">
+                <h2 class="section-title">
+                    <i class="fas fa-bookmark" style="color: #E17A41;"></i>
+                    برخی از ارجاعات این مقاله
+                </h2>
+                <div class="reference-item">
+                    <span class="reference-number">۱.</span> Clark, D. M., & Wells, A. (1995). A cognitive model of social phobia. In R. G. Heimberg, M. R. Liebowitz, D. A. Hope, & F. R. Schneier (Eds.), Social phobia: Diagnosis, assessment, and treatment (pp. 69-93). Guilford Press.
+                </div>
+                <div class="reference-item">
+                    <span class="reference-number">۲.</span> Hofmann, S. G., & Otto, M. W. (2017). Cognitive behavioral therapy for social anxiety disorder: Evidence-based and disorder-specific treatment techniques. Routledge.
+                </div>
+                <div class="reference-item">
+                    <span class="reference-number">۳.</span> کریمی، م.، و محمدی، ا. (۱۴۰۱). اثربخشی درمان شناختی-رفتاری بر اضطراب اجتماعی. مجله روانشناسی بالینی، ۱۴(۲)، ۴۵-۶۰.
+                </div>
+                <div class="reference-item">
+                    <span class="reference-number">۴.</span> American Psychiatric Association. (2013). Diagnostic and statistical manual of mental disorders (5th ed.). Arlington, VA: American Psychiatric Publishing.
+                </div>
+                <div style="text-align: center; margin-top: 20px;">
+                    <a href="#" style="color: #E17A41; text-decoration: none; font-weight: 600;">
+                        مشاهده همه ارجاعات (۲۴ مورد) <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- پاورقی -->
+    <div class="footer">
+        <div class="container">
+            <p>کلیه حقوق مادی و معنوی برای سای اکسپلور محفوظ است. © ۱۴۰۳</p>
+            <p style="margin-top: 10px; font-size: 13px;">
+                <a href="#" style="color: #7F7F7F; margin: 0 10px;">قوانین و مقررات</a> | 
+                <a href="#" style="color: #7F7F7F; margin: 0 10px;">درباره ما</a> | 
+                <a href="#" style="color: #7F7F7F; margin: 0 10px;">تماس با ما</a>
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        // تابع برای منوی هدر
+        function toggleMenu() {
+            const menu = document.getElementById('menuDropdown');
+            menu.classList.toggle('active');
+        }
+        
+        // بستن منو با کلیک خارج از آن
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('menuDropdown');
+            const toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('active');
+            }
+        });
+        
+        // فعال کردن جست‌وجو با Enter
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.search-input').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    searchNow();
+                }
+            });
+            
+            // فعال کردن دکمه جست‌وجو
+            document.querySelector('.search-button').addEventListener('click', searchNow);
+        });
+        
+        function searchNow() {
+            const query = document.querySelector('.search-input').value;
+            if (query.trim() !== '') {
+                console.log('جست‌وجو برای:', query);
+                alert(`جست‌وجو برای "${query}" انجام شد`);
+            }
+        }
+        
+        // اسکریپت برای تعامل‌های صفحه
+        
+        // شبیه‌سازی دانلود PDF
+        document.querySelector('.action-icon.pdf').addEventListener('click', function() {
+            // شبیه‌سازی دانلود
+            const downloadLink = document.createElement('a');
+            downloadLink.href = '#';
+            downloadLink.download = 'مقاله-اثربخشی-درمان-شناختی-رفتاری.pdf';
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+            
+            // نمایش پیام موفقیت
+            alert('دانلود PDF مقاله با موفقیت آغاز شد.');
+            
+            // افزایش شمارنده (در حالت واقعی به سرور ارسال می‌شود)
+            const downloadCount = document.querySelector('.info-table tr:nth-child(3) td:last-child');
+            let current = parseInt(downloadCount.textContent.replace(/[^0-9]/g, ''));
+            downloadCount.textContent = (current + 1).toLocaleString('fa-IR') + ' بار';
+        });
+        
+        // شبیه‌سازی استناد
+        document.querySelectorAll('.action-icon')[1].addEventListener('click', function() {
+            const citation = `کریمی، م.، محمدی، ا.، و قربانی، س. (۱۴۰۳). اثربخشی درمان شناختی-رفتاری گروهی بر کاهش علائم اضطراب اجتماعی در دانشجویان. مجله روانشناسی سلامت ایران، ۱۰(۳)، ۱۵-۳۰. https://doi.org/10.5812/ijhp.124578`;
+            navigator.clipboard.writeText(citation).then(() => {
+                alert('متن استناد در حافظه کپی شد!');
+            });
+        });
+        
+        // شبیه‌سازی اشتراک‌گذاری
+        document.querySelectorAll('.action-icon')[2].addEventListener('click', function() {
+            const url = window.location.href;
+            const title = document.title;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: title,
+                    text: 'این مقاله را در سای اکسپلور ببینید',
+                    url: url,
+                });
+            } else {
+                navigator.clipboard.writeText(url).then(() => {
+                    alert('لینک مقاله در حافظه کپی شد!');
+                });
+            }
+        });
+        
+        // شبیه‌سازی لایک
+        let liked = false;
+        document.querySelectorAll('.action-icon')[3].addEventListener('click', function() {
+            liked = !liked;
+            const icon = this.querySelector('i');
+            const text = this.querySelector('span');
+            
+            if (liked) {
+                icon.className = 'fas fa-heart';
+                this.style.color = '#E17A41';
+                text.textContent = 'لایک شد';
+                // افزایش شمارنده لایک
+                alert('مقاله مورد علاقه شما ثبت شد!');
+            } else {
+                icon.className = 'far fa-heart';
+                this.style.color = '';
+                text.textContent = 'لایک';
+            }
+        });
+        
+        // شبیه‌سازی نظر
+        document.querySelectorAll('.action-icon')[4].addEventListener('click', function() {
+            const comment = prompt('نظر خود را درباره این مقاله وارد کنید:');
+            if (comment && comment.trim() !== '') {
+                alert('نظر شما با موفقیت ثبت شد!');
+            }
+        });
+        
+        // شبیه‌سازی چاپ
+        document.querySelectorAll('.action-icon')[6].addEventListener('click', function() {
+            if (confirm('آیا می‌خواهید این صفحه را چاپ کنید؟')) {
+                window.print();
+            }
+        });
+    </script>
+</body>
+</html>

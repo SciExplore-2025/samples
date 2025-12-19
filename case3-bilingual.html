@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اطلاعات کامل - بررسی تأثیر آموزش آنلاین بر یادگیری دانشجویان - سای اکسپلور</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* استایل کلی */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Vazirmatn', sans-serif;
+        }
+        
+        body {
+            background-color: #F6F6F6;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* ========== هدر ========== */
+        .main-header {
+            height: 70px;
+            background: white;
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-part {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+        
+        .right-logo {
+            justify-content: flex-start;
+        }
+        
+        .center-search {
+            justify-content: center;
+        }
+        
+        .left-logo {
+            justify-content: flex-end;
+            gap: 20px;
+        }
+        
+        .header-menu {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            background: none;
+            border: none;
+            color: #7F7F7F;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 10px 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+        
+        .menu-toggle:hover {
+            background: #FEEBCA;
+            color: #E17A41;
+        }
+        
+        .menu-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 180px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s;
+            z-index: 1001;
+            border: 1px solid #eee;
+        }
+        
+        .menu-dropdown.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .menu-item {
+            display: block;
+            padding: 12px 20px;
+            color: #5A5A5A;
+            text-decoration: none;
+            transition: all 0.3s;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        
+        .menu-item:hover {
+            background: #FFF6E7;
+            color: #E17A41;
+            padding-right: 25px;
+        }
+        
+        .search-box {
+            width: 500px;
+            height: 50px;
+            border: 2px solid #7F7F7F;
+            border-radius: 25px;
+            display: flex;
+            overflow: hidden;
+            background: white;
+            margin-left: 15px;
+        }
+        
+        .search-input {
+            flex: 1;
+            border: none;
+            padding: 0 20px;
+            font-size: 16px;
+            outline: none;
+        }
+        
+        .search-button {
+            width: 50px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            color: #FCB42D;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .search-links-row {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .search-link {
+            color: #7F7F7F;
+            font-size: 13px;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        
+        .search-link:hover {
+            color: #E17A41;
+            text-decoration: underline;
+        }
+        
+        .logo {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ========== بخش ناوبری ========== */
+        .breadcrumb {
+            background-color: #F9F9F9;
+            padding: 15px 0;
+            border-bottom: 1px solid #EEE;
+            margin-bottom: 30px;
+        }
+        
+        .breadcrumb-content {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: #7F7F7F;
+        }
+        
+        .breadcrumb a {
+            color: #7F7F7F;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .breadcrumb a:hover {
+            color: #E17A41;
+            text-decoration: underline;
+        }
+        
+        .breadcrumb-separator {
+            color: #DDD;
+        }
+        
+        /* ========== بخش اصلی ========== */
+        .document-main {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        /* ستون چپ - اطلاعات اصلی */
+        .document-info {
+            flex: 3;
+            background-color: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            border: 1px solid #EEE;
+        }
+        
+        /* ستون راست - اطلاعات جانبی */
+        .document-sidebar {
+            flex: 1;
+            min-width: 280px;
+        }
+        
+        /* عنوان دو زبانه */
+        .document-title-container {
+            margin-bottom: 25px;
+            border-right: 4px solid #FCB42D;
+            padding-right: 15px;
+        }
+        
+        .document-title-fa {
+            color: #333;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+        
+        .document-title-en {
+            color: #5A5A5A;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1.5;
+            direction: ltr;
+            text-align: left;
+            font-style: italic;
+            border-top: 1px solid #EEE;
+            padding-top: 15px;
+        }
+        
+        /* اطلاعات استنادی */
+        .citation-info {
+            margin-bottom: 25px;
+        }
+        
+        .info-row {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: flex-start;
+        }
+        
+        .info-row:last-child {
+            margin-bottom: 0;
+        }
+        
+        .info-label {
+            color: #E17A41;
+            font-weight: 600;
+            min-width: 100px;
+            margin-left: 15px;
+        }
+        
+        .info-value {
+            color: #5A5A5A;
+            flex: 1;
+        }
+        
+        .author-names {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        .author-name {
+            display: block;
+        }
+        
+        .author-name-en {
+            font-family: 'Vazirmatn', sans-serif;
+            direction: ltr;
+            text-align: left;
+            color: #7F7F7F;
+            font-size: 14px;
+            margin-top: 2px;
+        }
+        
+        /* ردیف آیکون‌های تعاملی */
+        .action-icons-row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding-top: 25px;
+            margin-top: 25px;
+            border-top: 1px solid #EEE;
+            flex-wrap: wrap;
+        }
+        
+        .action-icon {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #5A5A5A;
+            text-decoration: none;
+            font-size: 15px;
+            transition: all 0.3s;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+        }
+        
+        .action-icon:hover {
+            background-color: #F5F5F5;
+            color: #333;
+            transform: translateY(-2px);
+        }
+        
+        .action-icon i {
+            font-size: 18px;
+        }
+        
+        .action-icon.pdf {
+            color: #2E7D32;
+            background-color: #F0FFF0;
+            border: 1px solid #D4EDDA;
+        }
+        
+        .action-icon.pdf:hover {
+            background-color: #E8F5E9;
+            color: #2E7D32;
+            transform: translateY(-2px);
+            box-shadow: 0 3px 8px rgba(46, 125, 50, 0.2);
+        }
+        
+        /* اعلان دو زبانه */
+        .bilingual-notice {
+            background-color: #FFF6E7;
+            border: 2px solid #FCB42D;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .bilingual-icon {
+            color: #E17A41;
+            font-size: 24px;
+        }
+        
+        .bilingual-text h4 {
+            color: #E17A41;
+            margin-bottom: 5px;
+        }
+        
+        .bilingual-text p {
+            color: #7F7F7F;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        /* اطلاعات فایل */
+        .file-info {
+            background-color: #F5F5F5;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .file-details {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #7F7F7F;
+            font-size: 14px;
+        }
+        
+        .file-size {
+            background-color: #FEEBCA;
+            color: #E17A41;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-weight: 600;
+        }
+        
+        /* بلوک‌های سایدبار */
+        .sidebar-block {
+            background-color: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            border: 1px solid #EEE;
+        }
+        
+        .sidebar-title {
+            color: #333;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #FEEBCA;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* وضعیت دسترسی */
+        .access-status {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #4CAF50;
+            font-weight: 600;
+            background-color: #F0FFF0;
+            padding: 12px 15px;
+            border-radius: 8px;
+            border-right: 3px solid #4CAF50;
+        }
+        
+        /* شناسه‌ها و لینک‌ها */
+        .identifiers-list {
+            list-style: none;
+        }
+        
+        .identifiers-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .identifiers-list a {
+            color: #5A5A5A;
+            text-decoration: none;
+            word-break: break-all;
+        }
+        
+        .identifiers-list a:hover {
+            color: #E17A41;
+            text-decoration: underline;
+        }
+        
+        /* کلمات کلیدی دو زبانه */
+        .keywords-bilingual {
+            margin-top: 15px;
+        }
+        
+        .keywords-section {
+            margin-bottom: 15px;
+        }
+        
+        .keywords-section:last-child {
+            margin-bottom: 0;
+        }
+        
+        .keywords-label {
+            color: #7F7F7F;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .keywords-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .keyword-link {
+            background-color: #FEEBCA;
+            color: #E17A41;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .keyword-link:hover {
+            background-color: #FCB42D;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 3px 8px rgba(252, 180, 45, 0.3);
+        }
+        
+        /* چکیده دو زبانه */
+        .abstract-bilingual {
+            background-color: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            border: 1px solid #EEE;
+        }
+        
+        .abstract-section {
+            margin-bottom: 30px;
+        }
+        
+        .abstract-section:last-child {
+            margin-bottom: 0;
+        }
+        
+        .abstract-title {
+            color: #333;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #FEEBCA;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .abstract-title-en {
+            direction: ltr;
+            text-align: left;
+            font-family: 'Vazirmatn', sans-serif;
+        }
+        
+        .abstract-text {
+            color: #5A5A5A;
+            line-height: 1.8;
+            text-align: justify;
+        }
+        
+        .abstract-text-en {
+            direction: ltr;
+            text-align: left;
+            font-family: 'Vazirmatn', sans-serif;
+            line-height: 1.6;
+        }
+        
+        .language-badge {
+            background-color: #E17A41;
+            color: white;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+        
+        /* بخش‌های تکمیلی */
+        .document-sections {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .section-block {
+            background-color: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            border: 1px solid #EEE;
+        }
+        
+        .section-title {
+            color: #333;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #FEEBCA;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* جداول اطلاعات */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .info-table tr {
+            border-bottom: 1px solid #EEE;
+        }
+        
+        .info-table tr:last-child {
+            border-bottom: none;
+        }
+        
+        .info-table td {
+            padding: 12px 10px;
+            color: #5A5A5A;
+        }
+        
+        .info-table td:first-child {
+            font-weight: 600;
+            color: #7F7F7F;
+            min-width: 140px;
+        }
+        
+        /* بخش اطلاعات دو زبانه */
+        .bilingual-info {
+            background-color: #FFF6E7;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 10px;
+        }
+        
+        .info-pair {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .info-pair:last-child {
+            margin-bottom: 0;
+        }
+        
+        .info-pair-fa {
+            color: #333;
+            font-weight: 500;
+        }
+        
+        .info-pair-en {
+            color: #7F7F7F;
+            font-size: 14px;
+            direction: ltr;
+            text-align: left;
+            font-style: italic;
+        }
+        
+        /* پاورقی */
+        .footer {
+            background-color: #F9F9F9;
+            border-top: 1px solid #DDD;
+            padding: 30px 0;
+            margin-top: 50px;
+            color: #7F7F7F;
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        /* واکنش‌گرایی */
+        @media (max-width: 900px) {
+            .main-header {
+                padding: 0 20px;
+                height: auto;
+                flex-wrap: wrap;
+                padding: 15px 20px;
+            }
+            
+            .search-box {
+                width: 100%;
+                margin: 10px 0;
+            }
+            
+            .center-search {
+                order: 3;
+                width: 100%;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 10px;
+            }
+            
+            .search-links-row {
+                margin-top: 8px;
+            }
+            
+            .left-logo {
+                justify-content: space-between;
+                width: 100%;
+                order: 2;
+                margin-top: 10px;
+            }
+            
+            .document-main {
+                flex-direction: column;
+            }
+            
+            .document-title-fa {
+                font-size: 24px;
+            }
+            
+            .document-title-en {
+                font-size: 18px;
+            }
+            
+            .action-icons-row {
+                justify-content: center;
+            }
+            
+            .info-row {
+                flex-direction: column;
+                gap: 5px;
+            }
+            
+            .info-label {
+                margin-left: 0;
+                min-width: auto;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .document-info, .sidebar-block, .abstract-bilingual, .section-block {
+                padding: 20px;
+            }
+            
+            .action-icons-row {
+                gap: 10px;
+                justify-content: space-between;
+            }
+            
+            .action-icon {
+                flex-direction: column;
+                gap: 5px;
+                padding: 8px;
+                font-size: 13px;
+            }
+            
+            .action-icon span {
+                font-size: 12px;
+            }
+            
+            .file-info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .language-badge {
+                display: block;
+                margin-bottom: 5px;
+                margin-right: 0;
+                width: fit-content;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- هدر -->
+    <header class="main-header">
+        <!-- بخش راست: منو + لوگوی ورود -->
+        <div class="header-part right-logo">
+            <!-- منو -->
+            <div class="header-menu">
+                <button class="menu-toggle" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                    منو
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="menu-dropdown" id="menuDropdown">
+                    <a href="#" class="menu-item">مقالات</a>
+                    <a href="#" class="menu-item">مجلات</a>
+                    <a href="#" class="menu-item">علم‌سنجی</a>
+                    <a href="#" class="menu-item">پروفایل‌ها</a>
+                </div>
+            </div>
+            
+            <!-- لوگوی ورود -->
+            <div class="logo">
+                <img src="loging icon.png" alt="ورود">
+            </div>
+        </div>
+        
+        <!-- بخش وسط: جست‌وجو -->
+        <div class="header-part center-search">
+            <div style="display: flex; align-items: center;">
+                <!-- باکس جست‌وجو -->
+                <div class="search-box">
+                    <input type="text" class="search-input" placeholder="جست‌وجو کنید...">
+                    <button class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                
+                <!-- لینک‌ها در کنار باکس -->
+                <div class="search-links-row">
+                    <a href="#" class="search-link">جست‌وجوی پیشرفته</a>
+                    <a href="#" class="search-link">راهنمای جست‌وجو</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- بخش چپ: لوگوی اصلی -->
+        <div class="header-part left-logo">
+            <div class="logo">
+                <img src="SX logo.jpg" alt="سای اکسپلور">
+            </div>
+        </div>
+    </header>
+    
+    <!-- بخش ناوبری -->
+    <div class="breadcrumb">
+        <div class="container">
+            <div class="breadcrumb-content">
+                <a href="#"><i class="fas fa-home"></i> صفحه اصلی</a>
+                <span class="breadcrumb-separator"><i class="fas fa-chevron-left"></i></span>
+                <a href="#">نتایج جست‌وجو</a>
+                <span class="breadcrumb-separator"><i class="fas fa-chevron-left"></i></span>
+                <span>اطلاعات کامل مدرک</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- محتوای اصلی -->
+    <div class="container">
+        <!-- بخش اصلی مدرک -->
+        <div class="document-main">
+            <!-- ستون چپ: اطلاعات اصلی -->
+            <div class="document-info">
+                <!-- عنوان دو زبانه -->
+                <div class="document-title-container">
+                    <h1 class="document-title-fa">
+                        بررسی تأثیر آموزش آنلاین بر یادگیری و رضایت دانشجویان رشته‌های مهندسی
+                    </h1>
+                    <div class="document-title-en">
+                        Investigating the Impact of Online Education on Learning and Satisfaction of Engineering Students
+                    </div>
+                </div>
+                
+                <!-- اطلاعات استنادی -->
+                <div class="citation-info">
+                    <div class="info-row">
+                        <div class="info-label">نویسنده(گان):</div>
+                        <div class="info-value">
+                            <div class="author-names">
+                                <span class="author-name">دکتر علی رضوانی</span>
+                                <span class="author-name-en">Dr. Ali Rezvani</span>
+                            </div>
+                            <div class="author-names" style="margin-top: 10px;">
+                                <span class="author-name">دکتر سعید کریمی</span>
+                                <span class="author-name-en">Dr. Saeed Karimi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">منبع:</div>
+                        <div class="info-value">فصلنامه آموزش مهندسی ایران، دوره ۸، شماره ۴</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">نوع مدرک:</div>
+                        <div class="info-value">مقاله پژوهشی (ژورنال)</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">تاریخ انتشار:</div>
+                        <div class="info-value">پاییز ۱۴۰۲</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">زبان مقاله:</div>
+                        <div class="info-value">فارسی و انگلیسی (دو زبانه)</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">DOI:</div>
+                        <div class="info-value">10.22047/ijee.2023.198765.1987</div>
+                    </div>
+                </div>
+                
+                <!-- اعلان دو زبانه -->
+                <div class="bilingual-notice">
+                    <div class="bilingual-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <div class="bilingual-text">
+                        <h4>مقاله دو زبانه (فارسی/انگلیسی)</h4>
+                        <p>این مقاله به دو زبان فارسی و انگلیسی منتشر شده است. متن کامل، چکیده و کلمات کلیدی در هر دو زبان در دسترس می‌باشند.</p>
+                    </div>
+                </div>
+                
+                <!-- اطلاعات فایل -->
+                <div class="file-info">
+                    <div class="file-details">
+                        <i class="fas fa-file-pdf" style="color: #F44336;"></i>
+                        <span>فایل PDF مقاله (دو زبانه)</span>
+                        <span class="file-size">۴.۵ مگابایت</span>
+                    </div>
+                    <div class="file-details">
+                        <i class="fas fa-language" style="color: #7F7F7F;"></i>
+                        <span>حاوی متن فارسی و انگلیسی</span>
+                    </div>
+                </div>
+                
+                <!-- ردیف آیکون‌های تعاملی -->
+                <div class="action-icons-row">
+                    <button class="action-icon pdf">
+                        <i class="fas fa-download"></i>
+                        <span>دانلود PDF</span>
+                    </button>
+                    
+                    <button class="action-icon">
+                        <i class="fas fa-quote-right"></i>
+                        <span>استناد</span>
+                    </button>
+                    
+                    <button class="action-icon">
+                        <i class="fas fa-share-alt"></i>
+                        <span>اشتراک‌گذاری</span>
+                    </button>
+                    
+                    <button class="action-icon">
+                        <i class="far fa-heart"></i>
+                        <span>لایک</span>
+                    </button>
+                    
+                    <button class="action-icon">
+                        <i class="far fa-comment"></i>
+                        <span>نظر</span>
+                    </button>
+                    
+                    <a href="https://scholar.google.com" target="_blank" class="action-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>گوگل اسکولار</span>
+                    </a>
+                    
+                    <button class="action-icon" onclick="toggleLanguage()">
+                        <i class="fas fa-exchange-alt"></i>
+                        <span id="language-toggle">نمایش انگلیسی</span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- ستون راست: سایدبار -->
+            <div class="document-sidebar">
+                <!-- وضعیت دسترسی -->
+                <div class="sidebar-block">
+                    <h3 class="sidebar-title">
+                        <i class="fas fa-lock-open" style="color: #4CAF50;"></i>
+                        وضعیت دسترسی
+                    </h3>
+                    <div class="access-status">
+                        <i class="fas fa-check-circle"></i>
+                        دسترسی آزاد کامل (Open Access)
+                    </div>
+                    <p style="color: #7F7F7F; font-size: 14px; margin-top: 10px; line-height: 1.5;">
+                        این مقاله تحت مجوز CC BY 4.0 منتشر شده است.
+                    </p>
+                </div>
+                
+                <!-- شناسه‌ها و لینک‌ها -->
+                <div class="sidebar-block">
+                    <h3 class="sidebar-title">
+                        <i class="fas fa-link"></i>
+                        شناسه‌ها و لینک‌ها
+                    </h3>
+                    <ul class="identifiers-list">
+                        <li>
+                            <i class="fas fa-hashtag" style="color: #7F7F7F;"></i>
+                            <span>کد مقاله: <strong>IJEE-2023-042</strong></span>
+                        </li>
+                        <li>
+                            <i class="fas fa-external-link-alt" style="color: #7F7F7F;"></i>
+                            <a href="https://doi.org/10.22047/ijee.2023.198765.1987">https://doi.org/10.22047/ijee.2023.198765.1987</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-language" style="color: #7F7F7F;"></i>
+                            <a href="#">نسخه HTML (فارسی)</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-language" style="color: #7F7F7F;"></i>
+                            <a href="#">نسخه HTML (انگلیسی)</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- کلمات کلیدی دو زبانه -->
+                <div class="sidebar-block">
+                    <h3 class="sidebar-title">
+                        <i class="fas fa-tags"></i>
+                        کلمات کلیدی
+                    </h3>
+                    <div class="keywords-bilingual">
+                        <div class="keywords-section">
+                            <div class="keywords-label">فارسی:</div>
+                            <div class="keywords-container">
+                                <a href="#" class="keyword-link">آموزش آنلاین</a>
+                                <a href="#" class="keyword-link">یادگیری الکترونیکی</a>
+                                <a href="#" class="keyword-link">رضایت دانشجویان</a>
+                                <a href="#" class="keyword-link">مهندسی آموزش</a>
+                                <a href="#" class="keyword-link">آموزش عالی</a>
+                            </div>
+                        </div>
+                        <div class="keywords-section">
+                            <div class="keywords-label">English:</div>
+                            <div class="keywords-container">
+                                <a href="#" class="keyword-link">Online Education</a>
+                                <a href="#" class="keyword-link">E-Learning</a>
+                                <a href="#" class="keyword-link">Student Satisfaction</a>
+                                <a href="#" class="keyword-link">Engineering Education</a>
+                                <a href="#" class="keyword-link">Higher Education</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- اطلاعات تکمیلی -->
+                <div class="sidebar-block">
+                    <h3 class="sidebar-title">
+                        <i class="fas fa-info-circle"></i>
+                        اطلاعات تکمیلی
+                    </h3>
+                    <table class="info-table">
+                        <tr>
+                            <td>صفحات:</td>
+                            <td>۲۰-۳۵</td>
+                        </tr>
+                        <tr>
+                            <td>استنادات:</td>
+                            <td>۳۲ استناد</td>
+                        </tr>
+                        <tr>
+                            <td>تعداد دانلود:</td>
+                            <td>۲,۱۵۶ بار</td>
+                        </tr>
+                        <tr>
+                            <td>نوع مقاله:</td>
+                            <td>مقاله پژوهشی دو زبانه</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <!-- اطلاعات زبانی -->
+                <div class="sidebar-block">
+                    <h3 class="sidebar-title">
+                        <i class="fas fa-globe" style="color: #7F7F7F;"></i>
+                        اطلاعات زبانی
+                    </h3>
+                    <div class="bilingual-info">
+                        <div class="info-pair">
+                            <div class="info-pair-fa">زبان اصلی مقاله: فارسی</div>
+                            <div class="info-pair-en">Original Language: Persian</div>
+                        </div>
+                        <div class="info-pair">
+                            <div class="info-pair-fa">ترجمه انگلیسی: کامل</div>
+                            <div class="info-pair-en">English Translation: Complete</div>
+                        </div>
+                        <div class="info-pair">
+                            <div class="info-pair-fa">ترجمه‌گر: تیم مترجمین مجله</div>
+                            <div class="info-pair-en">Translator: Journal Translation Team</div>
+                        </div>
+                        <div class="info-pair">
+                            <div class="info-pair-fa">تاریخ ترجمه: آبان ۱۴۰۲</div>
+                            <div class="info-pair-en">Translation Date: November 2023</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- چکیده دو زبانه -->
+        <div class="abstract-bilingual">
+            <!-- چکیده فارسی -->
+            <div class="abstract-section">
+                <h2 class="abstract-title">
+                    <span class="language-badge">فارسی</span>
+                    <i class="fas fa-file-alt" style="color: #E17A41;"></i>
+                    چکیده فارسی
+                </h2>
+                <div class="abstract-text">
+                    <p><strong>هدف:</strong> پژوهش حاضر با هدف بررسی تأثیر آموزش آنلاین بر یادگیری و رضایت دانشجویان رشته‌های مهندسی دانشگاه تهران انجام شد.</p>
+                    
+                    <p><strong>روش:</strong> این پژوهش از نوع نیمه آزمایشی با طرح پیش‌آزمون-پس‌آزمون با گروه کنترل بود. جامعه آماری شامل کلیه دانشجویان کارشناسی رشته‌های مهندسی دانشگاه تهران در نیمسال دوم سال تحصیلی ۱۴۰۱-۱۴۰۲ بود. نمونه‌ای به حجم ۱۲۰ نفر به روش نمونه‌گیری تصادفی خوشه‌ای انتخاب و در دو گروه آزمایش (۶۰ نفر) و کنترل (۶۰ نفر) جایگزین شدند. گروه آزمایش به مدت ۱۶ هفته تحت آموزش آنلاین قرار گرفتند، در حالی که گروه کنترل به روش سنتی آموزش دیدند. ابزارهای پژوهش شامل پرسشنامه محقق‌ساخته یادگیری، پرسشنامه رضایت از آموزش (SEQ) و آزمون پیشرفت تحصیلی بود.</p>
+                    
+                    <p><strong>یافته‌ها:</strong> نتایج تحلیل کوواریانس چندمتغیره نشان داد که آموزش آنلاین به طور معناداری بر افزایش یادگیری (۰.۰۰۱ > P) و رضایت دانشجویان (۰.۰۱ > P) تأثیر داشته است. همچنین، تفاوت معناداری بین رشته‌های مختلف مهندسی در میزان تأثیرپذیری از آموزش آنلاین مشاهده شد. دانشجویان رشته‌های مهندسی کامپیوتر و برق بیشترین رضایت را از آموزش آنلاین گزارش کردند.</p>
+                    
+                    <p><strong>نتیجه‌گیری:</strong> آموزش آنلاین می‌تواند به عنوان یک روش مؤثر در ارتقای یادگیری و افزایش رضایت دانشجویان مهندسی مورد استفاده قرار گیرد. با این حال، طراحی مناسب محتوای آموزشی و پشتیبانی فنی مناسب ضروری است.</p>
+                </div>
+            </div>
+            
+            <!-- چکیده انگلیسی -->
+            <div class="abstract-section">
+                <h2 class="abstract-title abstract-title-en">
+                    <span class="language-badge">English</span>
+                    <i class="fas fa-file-alt" style="color: #E17A41;"></i>
+                    English Abstract
+                </h2>
+                <div class="abstract-text abstract-text-en">
+                    <p><strong>Objective:</strong> This study aimed to investigate the impact of online education on the learning and satisfaction of engineering students at the University of Tehran.</p>
+                    
+                    <p><strong>Methods:</strong> This quasi-experimental study utilized a pretest-posttest design with a control group. The population consisted of all undergraduate engineering students at the University of Tehran during the second semester of the 2022-2023 academic year. A sample of 120 students was selected through cluster random sampling and assigned to experimental (n=60) and control (n=60) groups. The experimental group received online education for 16 weeks, while the control group received traditional face-to-face instruction. Research instruments included a researcher-made learning questionnaire, the Student Education Satisfaction Questionnaire (SEQ), and an academic achievement test.</p>
+                    
+                    <p><strong>Results:</strong> Multivariate analysis of covariance revealed that online education significantly improved both learning (P < 0.001) and student satisfaction (P < 0.01). Additionally, significant differences were observed among various engineering disciplines in their responsiveness to online education. Computer engineering and electrical engineering students reported the highest satisfaction with online education.</p>
+                    
+                    <p><strong>Conclusion:</strong> Online education can be an effective method for enhancing learning and increasing satisfaction among engineering students. However, appropriate instructional design and technical support are essential for successful implementation.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- بخش‌های تکمیلی -->
+        <div class="document-sections">
+            <!-- اطلاعات کتابشناختی کامل -->
+            <div class="section-block">
+                <h2 class="section-title">
+                    <i class="fas fa-book" style="color: #E17A41;"></i>
+                    اطلاعات کتابشناختی کامل
+                </h2>
+                <table class="info-table">
+                    <tr>
+                        <td>نام ژورنال:</td>
+                        <td>فصلنامه آموزش مهندسی ایران</td>
+                    </tr>
+                    <tr>
+                        <td>ناشر:</td>
+                        <td>انجمن آموزش مهندسی ایران</td>
+                    </tr>
+                    <tr>
+                        <td>دوره/جلد:</td>
+                        <td>دوره ۸، شماره ۴</td>
+                    </tr>
+                    <tr>
+                        <td>تاریخ انتشار:</td>
+                        <td>پاییز ۱۴۰۲</td>
+                    </tr>
+                    <tr>
+                        <td>شماره ISSN:</td>
+                        <td>۲۵۸۸-۴۵۶۷</td>
+                    </tr>
+                    <tr>
+                        <td>صفحات مقاله:</td>
+                        <td>۲۰-۳۵</td>
+                    </tr>
+                    <tr>
+                        <td>زبان انتشار:</td>
+                        <td>دو زبانه (فارسی/انگلیسی)</td>
+                    </tr>
+                    <tr>
+                        <td>نوع دسترسی:</td>
+                        <td>دسترسی آزاد (Open Access)</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- اطلاعات فنی -->
+            <div class="section-block">
+                <h2 class="section-title">
+                    <i class="fas fa-cogs" style="color: #E17A41;"></i>
+                    اطلاعات فنی
+                </h2>
+                <table class="info-table">
+                    <tr>
+                        <td>تاریخ ورود به پایگاه:</td>
+                        <td>۱۰ آبان ۱۴۰۲</td>
+                    </tr>
+                    <tr>
+                        <td>آخرین بروزرسانی:</td>
+                        <td>۱۵ دی ۱۴۰۲</td>
+                    </tr>
+                    <tr>
+                        <td>قالب استناددهی:</td>
+                        <td>APA, IEEE, Vancouver</td>
+                    </tr>
+                    <tr>
+                        <td>رده‌بندی موضوعی:</td>
+                        <td>آموزش مهندسی • فناوری آموزشی • آموزش عالی</td>
+                    </tr>
+                    <tr>
+                        <td>نوع فایل:</td>
+                        <td>PDF (متن دو زبانه)</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- بخش ارجاعات -->
+            <div class="section-block">
+                <h2 class="section-title">
+                    <i class="fas fa-quote-right" style="color: #E17A41;"></i>
+                    استناد به این مقاله
+                </h2>
+                <div style="background-color: #F5F5F5; padding: 20px; border-radius: 8px;">
+                    <h4 style="color: #333; margin-bottom: 10px;">استناد فارسی:</h4>
+                    <p style="color: #5A5A5A; background-color: white; padding: 15px; border-radius: 6px; border-right: 3px solid #FEEBCA; line-height: 1.8;">
+                        رضوانی، ع.، و کریمی، س. (۱۴۰۲). بررسی تأثیر آموزش آنلاین بر یادگیری و رضایت دانشجویان رشته‌های مهندسی. فصلنامه آموزش مهندسی ایران، ۸(۴)، ۲۰-۳۵. https://doi.org/10.22047/ijee.2023.198765.1987
+                    </p>
+                    
+                    <h4 style="color: #333; margin-top: 20px; margin-bottom: 10px;">English Citation:</h4>
+                    <p style="color: #5A5A5A; background-color: white; padding: 15px; border-radius: 6px; border-right: 3px solid #FEEBCA; line-height: 1.8; direction: ltr; text-align: left;">
+                        Rezvani, A., & Karimi, S. (2023). Investigating the Impact of Online Education on Learning and Satisfaction of Engineering Students. Iranian Journal of Engineering Education, 8(4), 20-35. https://doi.org/10.22047/ijee.2023.198765.1987
+                    </p>
+                    
+                    <div style="display: flex; gap: 10px; margin-top: 15px;">
+                        <button onclick="copyCitation('fa')" style="background-color: #FEEBCA; color: #E17A41; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: 600;">
+                            <i class="fas fa-copy"></i> کپی فارسی
+                        </button>
+                        <button onclick="copyCitation('en')" style="background-color: #F5F5F5; color: #5A5A5A; border: 1px solid #DDD; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: 600;">
+                            <i class="fas fa-copy"></i> کپی انگلیسی
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- پاورقی -->
+    <div class="footer">
+        <div class="container">
+            <p>کلیه حقوق مادی و معنوی برای سای اکسپلور محفوظ است. © ۱۴۰۳</p>
+            <p style="margin-top: 10px; font-size: 13px;">
+                <a href="#" style="color: #7F7F7F; margin: 0 10px;">قوانین و مقررات</a> | 
+                <a href="#" style="color: #7F7F7F; margin: 0 10px;">درباره ما</a> | 
+                <a href="#" style="color: #7F7F7F; margin: 0 10px;">تماس با ما</a>
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        // تابع برای منوی هدر
+        function toggleMenu() {
+            const menu = document.getElementById('menuDropdown');
+            menu.classList.toggle('active');
+        }
+        
+        // بستن منو با کلیک خارج از آن
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('menuDropdown');
+            const toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('active');
+            }
+        });
+        
+        // فعال کردن جست‌وجو با Enter
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.search-input').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    searchNow();
+                }
+            });
+            
+            // فعال کردن دکمه جست‌وجو
+            document.querySelector('.search-button').addEventListener('click', searchNow);
+        });
+        
+        function searchNow() {
+            const query = document.querySelector('.search-input').value;
+            if (query.trim() !== '') {
+                console.log('جست‌وجو برای:', query);
+                alert(`جست‌وجو برای "${query}" انجام شد`);
+            }
+        }
+        
+        // متغیر برای وضعیت زبان
+        let showingEnglish = false;
+        
+        // تابع تغییر نمایش زبان
+        function toggleLanguage() {
+            const abstractFa = document.querySelector('.abstract-section:first-child');
+            const abstractEn = document.querySelector('.abstract-section:last-child');
+            const toggleButton = document.getElementById('language-toggle');
+            
+            if (showingEnglish) {
+                // نمایش فارسی
+                abstractFa.style.display = 'block';
+                abstractEn.style.display = 'none';
+                toggleButton.innerHTML = '<i class="fas fa-exchange-alt"></i> نمایش انگلیسی';
+                showingEnglish = false;
+            } else {
+                // نمایش انگلیسی
+                abstractFa.style.display = 'none';
+                abstractEn.style.display = 'block';
+                toggleButton.innerHTML = '<i class="fas fa-exchange-alt"></i> نمایش فارسی';
+                showingEnglish = true;
+            }
+        }
+        
+        // تابع کپی استناد
+        function copyCitation(lang) {
+            let citationText = '';
+            
+            if (lang === 'fa') {
+                citationText = `رضوانی، ع.، و کریمی، س. (۱۴۰۲). بررسی تأثیر آموزش آنلاین بر یادگیری و رضایت دانشجویان رشته‌های مهندسی. فصلنامه آموزش مهندسی ایران، ۸(۴)، ۲۰-۳۵. https://doi.org/10.22047/ijee.2023.198765.1987`;
+            } else {
+                citationText = `Rezvani, A., & Karimi, S. (2023). Investigating the Impact of Online Education on Learning and Satisfaction of Engineering Students. Iranian Journal of Engineering Education, 8(4), 20-35. https://doi.org/10.22047/ijee.2023.198765.1987`;
+            }
+            
+            navigator.clipboard.writeText(citationText).then(() => {
+                alert(`متن استناد ${lang === 'fa' ? 'فارسی' : 'انگلیسی'} در حافظه کپی شد!`);
+            });
+        }
+        
+        // اسکریپت برای تعامل‌های صفحه
+        
+        // شبیه‌سازی دانلود PDF
+        document.querySelector('.action-icon.pdf').addEventListener('click', function() {
+            alert('دانلود PDF مقاله دو زبانه با موفقیت آغاز شد.');
+        });
+        
+        // شبیه‌سازی استناد
+        document.querySelectorAll('.action-icon')[1].addEventListener('click', function() {
+            copyCitation('fa');
+        });
+        
+        // شبیه‌سازی اشتراک‌گذاری
+        document.querySelectorAll('.action-icon')[2].addEventListener('click', function() {
+            const url = window.location.href;
+            const title = document.title;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: title,
+                    text: 'این مقاله دو زبانه را در سای اکسپلور ببینید',
+                    url: url,
+                });
+            } else {
+                navigator.clipboard.writeText(url).then(() => {
+                    alert('لینک مقاله در حافظه کپی شد!');
+                });
+            }
+        });
+        
+        // شبیه‌سازی لایک
+        let liked = false;
+        document.querySelectorAll('.action-icon')[3].addEventListener('click', function() {
+            liked = !liked;
+            const icon = this.querySelector('i');
+            const text = this.querySelector('span');
+            
+            if (liked) {
+                icon.className = 'fas fa-heart';
+                this.style.color = '#E17A41';
+                text.textContent = 'لایک شد';
+                alert('مقاله مورد علاقه شما ثبت شد!');
+            } else {
+                icon.className = 'far fa-heart';
+                this.style.color = '';
+                text.textContent = 'لایک';
+            }
+        });
+        
+        // شبیه‌سازی نظر
+        document.querySelectorAll('.action-icon')[4].addEventListener('click', function() {
+            const comment = prompt('نظر خود را درباره این مقاله وارد کنید:');
+            if (comment && comment.trim() !== '') {
+                alert('نظر شما با موفقیت ثبت شد!');
+            }
+        });
+    </script>
+</body>
+</html>

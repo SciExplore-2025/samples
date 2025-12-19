@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اطلاعات کامل - تأثیر شبکه‌های اجتماعی بر سلامت روان نوجوانان: یک مطالعه مروری - سای اکسپلور</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* استایل کلی */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Vazirmatn', sans-serif;
+        }
+        
+        body {
+            background-color: #F6F6F6;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* ========== هدر ========== */
+        .main-header {
+            height: 70px;
+            background: white;
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-part {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+        
+        .right-logo {
+            justify-content: flex-start;
+        }
+        
+        .center-search {
+            justify-content: center;
+        }
+        
+        .left-logo {
+            justify-content: flex-end;
+            gap: 20px;
+        }
+        
+        .header-menu {
+            position: relative;
+        }
+        
+        .menu-toggle {
+            background: none;
+            border: none;
+            color: #7F7F7F;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 10px 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+        
+        .menu-toggle:hover {
+            background: #FEEBCA;
+            color: #E17A41;
+        }
+        
+        .menu-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 180px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s;
+            z-index: 1001;
+            border: 1px solid #eee;
+        }
+        
+        .menu-dropdown.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .menu-item {
+            display: block;
+            padding: 12px 20px;
+            color: #5A5A5A;
+            text-decoration: none;
+            transition: all 0.3s;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        
+        .menu-item:hover {
+            background: #FFF6E7;
+            color: #E17A41;
+            padding-right: 25px;
+        }
+        
+        .search-box {
+            width: 500px;
+            height: 50px;
+            border: 2px solid #7F7F7F;
+            border-radius: 25px;
+            display: flex;
+            overflow: hidden;
+            background: white;
+            margin-left: 15px;
+        }
+        
+        .search-input {
+            flex: 1;
+            border: none;
+            padding: 0 20px;
+            font-size: 16px;
+            outline: none;
+        }
+        
+        .search-button {
+            width: 50px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            color: #FCB42D;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .search-links-row {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .search-link {
+            color: #7F7F7F;
+            font-size: 13px;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        
+        .search-link:hover {
+            color: #E17A41;
+            text-decoration: underline;
+        }
+        
+        .logo {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ========== بخش ناوبری ========== */
+        .breadcrumb {
+            background-color: #F9F9F9;
+            padding: 15px 0;
+            border-bottom: 1px solid #EEE;
+            margin-bottom: 30px;
+        }
+        
+        .breadcrumb-content {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: #7F7F7F;
+        }
+        
+        .breadcrumb a {
+            color: #7F7F7F;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .breadcrumb a:hover {
+            color: #E17A41;
+            text-decoration: underline;
+        }
+        
+        .breadcrumb-separator {
+            color: #DDD;
+        }
+        
+        /* ========== بخش اصلی ========== */
+        .document-main {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        /* ستون چپ - اطلاعات اصلی */
+        .document-info {
+            flex: 3;
+            background-color: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            border: 1px solid #EEE;
+        }
+        
+        /* ستون راست - اطلاعات جانبی */
+        .document-sidebar {
+            flex: 1;
+            min-width: 280px;
+        }
+        
+        /* عنوان مدرک */
+        .document-title {
+            color: #333;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 25px;
+            border-right: 4px solid #FCB42D;
+            padding-right: 15px;
+        }
+        
+        /* اطلاعات استنادی */
+        .citation-info {
+            margin-bottom: 25px;
+        }
+        
+        .info-row {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: flex-start;
+        }
+        
+        .info-row:last-child {
+            margin-bottom: 0;
+        }
+        
+        .info-label {
+            color: #E17A41;
+            font-weight: 600;
+            min-width: 100px;
+            margin-left: 15px;
+        }
+        
+        .info-value {
+            color: #5A5A5A;
+            flex: 1;
+        }
+        
+        .author-names {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        .author-name {
+            display: block;
+        }
+        
+        .author-name-en {
+            font-family: 'Vazirmatn', sans-serif;
+            direction: ltr;
+            text-align: left;
+            color: #7F7F7F;
+            font-size: 14px;
+            margin-top: 2px;
+        }
+        
+        /* ردیف آیکون‌های تعاملی */
+        .action-icons-row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding-top: 25px;
+            margin-top: 25px;
+            border-top: 1px solid #EEE;
+            flex-wrap: wrap;
+        }
+        
+        .action-icon {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #5A5A5A;
+            text-decoration: none;
+            font-size: 15px;
+            transition: all 0.3s;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+        }
+        
+        .action-icon:hover {
+            background-color: #F5F5F5;
+            color: #333;
+            transform: translateY(-2px);
+        }
+        
+        .action-icon i {
+            font-size: 18px;
+        }
+        
+        .action-icon.disabled {
+            color: #CCC;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+        
+        .action-icon.disabled:hover {
+            background-color: transparent;
+            transform: none;
+            color: #CCC;
+        }
+        
+        /* وضعیت عدم دسترسی */
+        .no-access-alert {
+            background-color: #FFF6E7;
+            border: 2px solid #FCB42D;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .no-access-icon {
+            color: #FF9800;
+            font-size: 24px;
+        }
+        
+        .no-access-text h4 {
+            color: #E17A41;
+            margin-bottom: 5px;
+        }
+        
+        .no-access-text p {
+            color: #7F7F7F;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        /* بلوک‌های سایدبار */
+        .sidebar-block {
+            background-color: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            border: 1px solid #EEE;
+        }
+        
+        .sidebar-title {
+            color: #333;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #FEEBCA;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* وضعیت دسترسی محدود */
+        .restricted-access {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #FF9800;
+            font-weight: 600;
+            background-color: #FFF6E7;
+            padding: 12px 15px;
+            border-radius: 8px;
+            border-right: 3px solid #FF9800;
+        }
+        
+        /* شناسه‌ها و لینک‌ها */
+        .identifiers-list {
+            list-style: none;
+        }
+        
+        .identifiers-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .identifiers-list a {
+            color: #5A5A5A;
+            text-decoration: none;
+            word-break: break-all;
+        }
+        
+        .identifiers-list a:hover {
+            color: #E17A41;
+            text-decoration: underline;
+        }
+        
+        /* کلمات کلیدی لینک‌دار */
+        .keywords-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .keyword-link {
+            background-color: #FEEBCA;
+            color: #E17A41;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .keyword-link:hover {
+            background-color: #FCB42D;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 3px 8px rgba(252, 180, 45, 0.3);
+        }
+        
+        /* چکیده کامل */
+        .abstract-full {
+            background-color: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            border: 1px solid #EEE;
+        }
+        
+        .abstract-title {
+            color: #333;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #FEEBCA;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .abstract-text {
+            color: #5A5A5A;
+            line-height: 1.8;
+            text-align: justify;
+        }
+        
+        /* بخش‌های تکمیلی */
+        .document-sections {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .section-block {
+            background-color: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            border: 1px solid #EEE;
+        }
+        
+        .section-title {
+            color: #333;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #FEEBCA;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* جداول اطلاعات */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .info-table tr {
+            border-bottom: 1px solid #EEE;
+        }
+        
+        .info-table tr:last-child {
+            border-bottom: none;
+        }
+        
+        .info-table td {
+            padding: 12px 10px;
+            color: #5A5A5A;
+        }
+        
+        .info-table td:first-child {
+            font-weight: 600;
+            color: #7F7F7F;
+            min-width: 140px;
+        }
+        
+        /* پاورقی */
+        .footer {
+            background-color: #F9F9F9;
+            border-top: 1px solid #DDD;
+            padding: 30px 0;
+            margin-top: 50px;
+            color: #7F7F7F;
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        /* واکنش‌گرایی */
+        @media (max-width: 900px) {
+            .main-header {
+                padding: 0 20px;
+                height: auto;
+                flex-wrap: wrap;
+                padding: 15px 20px;
+            }
+            
+            .search-box {
+                width: 100%;
+                margin: 10px 0;
+            }
+            
+            .center-search {
+                order: 3;
+                width: 100%;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 10px;
+            }
+            
+            .search-links-row {
+                margin-top: 8px;
+            }
+            
+            .left-logo {
+                justify-content: space-between;
+                width: 100%;
+                order: 2;
+                margin-top: 10px;
+            }
+            
+            .document-main {
+                flex-direction: column;
+            }
+            
+            .document-title {
+                font-size: 24px;
+            }
+            
+            .action-icons-row {
+                justify-content: center;
+            }
+            
+            .info-row {
+                flex-direction: column;
+                gap: 5px;
+            }
+            
+            .info-label {
+                margin-left: 0;
+                min-width: auto;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .document-info, .sidebar-block, .abstract-full, .section-block {
+                padding: 20px;
+            }
+            
+            .action-icons-row {
+                gap: 10px;
+                justify-content: space-between;
+            }
+            
+            .action-icon {
+                flex-direction: column;
+                gap: 5px;
+                padding: 8px;
+                font-size: 13px;
+            }
+            
+            .action-icon span {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- هدر -->
+    <header class="main-header">
+        <!-- بخش راست: منو + لوگوی ورود -->
+        <div class="header-part right-logo">
+            <!-- منو -->
+            <div class="header-menu">
+                <button class="menu-toggle" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                    منو
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="menu-dropdown" id="menuDropdown">
+                    <a href="#" class="menu-item">مقالات</a>
+                    <a href="#" class="menu-item">مجلات</a>
+                    <a href="#" class="menu-item">علم‌سنجی</a>
+                    <a href="#" class="menu-item">پروفایل‌ها</a>
+                </div>
+            </div>
+            
+            <!-- لوگوی ورود -->
+            <div class="logo">
+                <img src="loging icon.png" alt="ورود">
+            </div>
+        </div>
+        
+        <!-- بخش وسط: جست‌وجو -->
+        <div class="header-part center-search">
+            <div style="display: flex; align-items: center;">
+                <!-- باکس جست‌وجو -->
+                <div class="search-box">
+                    <input type="text" class="search-input" placeholder="جست‌وجو کنید...">
+                    <button class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                
+                <!-- لینک‌ها در کنار باکس -->
+                <div class="search-links-row">
+                    <a href="#" class="search-link">جست‌وجوی پیشرفته</a>
+                    <a href="#" class="search-link">راهنمای جست‌وجو</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- بخش چپ: لوگوی اصلی -->
+        <div class="header-part left-logo">
+            <div class="logo">
+                <img src="SX logo.jpg" alt="سای اکسپلور">
+            </div>
+        </div>
+    </header>
+    
+    <!-- بخش ناوبری -->
+    <div class="breadcrumb">
+        <div class="container">
+            <div class="breadcrumb-content">
+                <a href="#"><i class="fas fa-home"></i> صفحه اصلی</a>
+                <span class="breadcrumb-separator"><i class="fas fa-chevron-left"></i></span>
+                <a href="#">نتایج جست‌وجو</a>
+                <span class="breadcrumb-separator"><i class="fas fa-chevron-left"></i></span>
+                <span>اطلاعات کامل مدرک</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- محتوای اصلی -->
+    <div class="container">
+        <!-- بخش اصلی مدرک -->
+        <div class="document-main">
+            <!-- ستون چپ: اطلاعات اصلی -->
+            <div class="document-info">
+                <h1 class="document-title">
+                    تأثیر شبکه‌های اجتماعی بر سلامت روان نوجوانان: یک مطالعه مروری
+                </h1>
+                
+                <!-- اطلاعات استنادی -->
+                <div class="citation-info">
+                    <div class="info-row">
+                        <div class="info-label">نویسنده(گان):</div>
+                        <div class="info-value">
+                            <div class="author-names">
+                                <span class="author-name">دکتر محمد رضایی</span>
+                                <span class="author-name-en">Dr. Mohammad Rezaei</span>
+                            </div>
+                            <div class="author-names" style="margin-top: 10px;">
+                                <span class="author-name">دکتر فاطمه احمدی</span>
+                                <span class="author-name-en">Dr. Fatemeh Ahmadi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">منبع:</div>
+                        <div class="info-value">مجله روانشناسی بالینی ایران، دوره ۱۵، شماره ۲</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">نوع مدرک:</div>
+                        <div class="info-value">مقاله پژوهشی (ژورنال)</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">تاریخ انتشار:</div>
+                        <div class="info-value">زمستان ۱۴۰۲</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">زبان:</div>
+                        <div class="info-value">فارسی</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">DOI:</div>
+                        <div class="info-value">10.1007/s10567-023-00434-7</div>
+                    </div>
+                </div>
+                
+                <!-- اعلان عدم دسترسی -->
+                <div class="no-access-alert">
+                    <div class="no-access-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="no-access-text">
+                        <h4>دسترسی محدود به متن کامل</h4>
+                        <p>این مقاله تحت اشتراک ژورنال منتشر شده و متن کامل آن در این پایگاه موجود نمی‌باشد. برای دسترسی به متن کامل می‌توانید از طریق سایت رسمی ژورنال اقدام کنید.</p>
+                    </div>
+                </div>
+                
+                <!-- ردیف آیکون‌های تعاملی -->
+                <div class="action-icons-row">
+                    <button class="action-icon disabled" title="متن کامل در دسترس نیست">
+                        <i class="fas fa-download"></i>
+                        <span>دانلود PDF</span>
+                    </button>
+                    
+                    <button class="action-icon">
+                        <i class="fas fa-quote-right"></i>
+                        <span>استناد</span>
+                    </button>
+                    
+                    <button class="action-icon">
+                        <i class="fas fa-share-alt"></i>
+                        <span>اشتراک‌گذاری</span>
+                    </button>
+                    
+                    <button class="action-icon">
+                        <i class="far fa-heart"></i>
+                        <span>لایک</span>
+                    </button>
+                    
+                    <button class="action-icon">
+                        <i class="far fa-comment"></i>
+                        <span>نظر</span>
+                    </button>
+                    
+                    <a href="https://scholar.google.com" target="_blank" class="action-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>گوگل اسکولار</span>
+                    </a>
+                    
+                    <a href="https://www.journalofclinicalpsychology.ir" target="_blank" class="action-icon">
+                        <i class="fas fa-external-link-alt"></i>
+                        <span>سایت ژورنال</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- ستون راست: سایدبار -->
+            <div class="document-sidebar">
+                <!-- وضعیت دسترسی -->
+                <div class="sidebar-block">
+                    <h3 class="sidebar-title">
+                        <i class="fas fa-lock" style="color: #FF9800;"></i>
+                        وضعیت دسترسی
+                    </h3>
+                    <div class="restricted-access">
+                        <i class="fas fa-ban"></i>
+                        بدون دسترسی به متن کامل
+                    </div>
+                    <p style="color: #7F7F7F; font-size: 14px; margin-top: 10px; line-height: 1.5;">
+                        این مقاله تحت سیاست دسترسی محدود ژورنال منتشر شده است.
+                    </p>
+                </div>
+                
+                <!-- شناسه‌ها و لینک‌ها -->
+                <div class="sidebar-block">
+                    <h3 class="sidebar-title">
+                        <i class="fas fa-link"></i>
+                        شناسه‌ها و لینک‌ها
+                    </h3>
+                    <ul class="identifiers-list">
+                        <li>
+                            <i class="fas fa-hashtag" style="color: #7F7F7F;"></i>
+                            <span>کد مقاله: <strong>ICP-2023-024</strong></span>
+                        </li>
+                        <li>
+                            <i class="fas fa-external-link-alt" style="color: #7F7F7F;"></i>
+                            <a href="https://doi.org/10.1007/s10567-023-00434-7">https://doi.org/10.1007/s10567-023-00434-7</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-newspaper" style="color: #7F7F7F;"></i>
+                            <a href="https://www.journalofclinicalpsychology.ir">سایت رسمی ژورنال</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-database" style="color: #7F7F7F;"></i>
+                            <span>پایگاه‌های نمایه‌سازی: SCOPUS, Web of Science</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- کلمات کلیدی لینک‌دار -->
+                <div class="sidebar-block">
+                    <h3 class="sidebar-title">
+                        <i class="fas fa-tags"></i>
+                        کلمات کلیدی
+                    </h3>
+                    <div class="keywords-container">
+                        <a href="#" class="keyword-link">شبکه‌های اجتماعی</a>
+                        <a href="#" class="keyword-link">سلامت روان</a>
+                        <a href="#" class="keyword-link">نوجوانان</a>
+                        <a href="#" class="keyword-link">اعتیاد اینترنتی</a>
+                        <a href="#" class="keyword-link">روانشناسی بالینی</a>
+                        <a href="#" class="keyword-link">مداخلات روانشناختی</a>
+                    </div>
+                </div>
+                
+                <!-- اطلاعات تکمیلی -->
+                <div class="sidebar-block">
+                    <h3 class="sidebar-title">
+                        <i class="fas fa-info-circle"></i>
+                        اطلاعات تکمیلی
+                    </h3>
+                    <table class="info-table">
+                        <tr>
+                            <td>صفحات:</td>
+                            <td>۲۵-۴۵</td>
+                        </tr>
+                        <tr>
+                            <td>استنادات:</td>
+                            <td>۱۸ استناد</td>
+                        </tr>
+                        <tr>
+                            <td>ضریب تأثیر:</td>
+                            <td>۲.۴</td>
+                        </tr>
+                        <tr>
+                            <td>شاخص H-index:</td>
+                            <td>۱۵</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <!-- چکیده کامل -->
+        <div class="abstract-full">
+            <h2 class="abstract-title">
+                <i class="fas fa-file-alt" style="color: #E17A41;"></i>
+                چکیده کامل
+            </h2>
+            <div class="abstract-text">
+                <p>هدف این مطالعه مروری، بررسی نظام‌مند تأثیرات شبکه‌های اجتماعی بر سلامت روان نوجوانان در ایران است. با گسترش روزافزون استفاده از شبکه‌های اجتماعی در بین نوجوانان، بررسی تأثیرات مثبت و منفی این پدیده بر سلامت روان این قشر از اهمیت ویژه‌ای برخوردار است. این مطالعه با جست‌وجوی نظام‌مند در پایگاه‌های اطلاعاتی معتبر داخلی و خارجی، ۴۵ مقاله مرتبط منتشر شده در فاصله سال‌های ۱۳۹۵ تا ۱۴۰۲ را مورد بررسی قرار داد.</p>
+                
+                <p>یافته‌های مطالعه نشان می‌دهد که استفاده بیش از حد از شبکه‌های اجتماعی با افزایش علائم افسردگی، اضطراب، کاهش عزت نفس و اختلالات خواب در نوجوانان همراه است. از سوی دیگر، استفاده متعادل و هدفمند از این شبکه‌ها می‌تواند فرصت‌هایی برای توسعه مهارت‌های اجتماعی، تبادل اطلاعات آموزشی و ایجاد حمایت اجتماعی فراهم آورد. عوامل تعدیل‌کننده‌ای همچون ویژگی‌های شخصیتی، حمایت خانواده و آموزش مهارت‌های استفاده سالم از اینترنت در تعدیل تأثیرات منفی نقش مهمی دارند.</p>
+                
+                <p>نتایج این مطالعه لزوم توجه به آموزش مهارت‌های استفاده سالم از شبکه‌های اجتماعی، تدوین برنامه‌های پیشگیرانه و مداخلات روانشناختی هدفمند برای نوجوانان را نشان می‌دهد. پیشنهاد می‌شود مطالعات آینده به بررسی اثربخشی مداخلات روانشناختی مبتنی بر شواهد در کاهش آسیب‌های شبکه‌های اجتماعی بپردازند.</p>
+            </div>
+        </div>
+        
+        <!-- بخش‌های تکمیلی -->
+        <div class="document-sections">
+            <!-- اطلاعات کتابشناختی کامل -->
+            <div class="section-block">
+                <h2 class="section-title">
+                    <i class="fas fa-book" style="color: #E17A41;"></i>
+                    اطلاعات کتابشناختی کامل
+                </h2>
+                <table class="info-table">
+                    <tr>
+                        <td>نام ژورنال:</td>
+                        <td>مجله روانشناسی بالینی ایران</td>
+                    </tr>
+                    <tr>
+                        <td>ناشر:</td>
+                        <td>انجمن روانشناسی بالینی ایران</td>
+                    </tr>
+                    <tr>
+                        <td>دوره/جلد:</td>
+                        <td>دوره ۱۵، شماره ۲</td>
+                    </tr>
+                    <tr>
+                        <td>تاریخ انتشار:</td>
+                        <td>زمستان ۱۴۰۲</td>
+                    </tr>
+                    <tr>
+                        <td>شماره ISSN:</td>
+                        <td>۲۵۸۸-۷۷۶۵</td>
+                    </tr>
+                    <tr>
+                        <td>صفحات مقاله:</td>
+                        <td>۲۵-۴۵</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- اطلاعات فنی -->
+            <div class="section-block">
+                <h2 class="section-title">
+                    <i class="fas fa-cogs" style="color: #E17A41;"></i>
+                    اطلاعات فنی
+                </h2>
+                <table class="info-table">
+                    <tr>
+                        <td>تاریخ ورود به پایگاه:</td>
+                        <td>۱۵ بهمن ۱۴۰۲</td>
+                    </tr>
+                    <tr>
+                        <td>آخرین بروزرسانی:</td>
+                        <td>۲۰ اسفند ۱۴۰۲</td>
+                    </tr>
+                    <tr>
+                        <td>قالب استناددهی:</td>
+                        <td>APA, Vancouver, Harvard</td>
+                    </tr>
+                    <tr>
+                        <td>رده‌بندی موضوعی:</td>
+                        <td>روانشناسی • علوم اجتماعی • رسانه</td>
+                    </tr>
+                    <tr>
+                        <td>نوع دسترسی:</td>
+                        <td>محدود (تنها چکیده)</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- اطلاعات اشتراک -->
+            <div class="section-block">
+                <h2 class="section-title">
+                    <i class="fas fa-shopping-cart" style="color: #E17A41;"></i>
+                    دسترسی به متن کامل
+                </h2>
+                <div style="background-color: #FFF6E7; padding: 20px; border-radius: 8px; border-right: 3px solid #FCB42D;">
+                    <p style="color: #5A5A5A; margin-bottom: 15px;">
+                        برای دسترسی به متن کامل این مقاله، می‌توانید یکی از راه‌های زیر را انتخاب کنید:
+                    </p>
+                    <ul style="color: #5A5A5A; padding-right: 20px; line-height: 1.8;">
+                        <li>خرید مقاله از سایت رسمی ژورنال</li>
+                        <li>دسترسی از طریق کتابخانه‌های دانشگاهی دارای اشتراک</li>
+                        <li>درخواست از نویسنده مسئول (براساس سیاست نویسنده)</li>
+                        <li>استفاده از سرویس‌های درخواست مقاله (Article Request)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- پاورقی -->
+    <div class="footer">
+        <div class="container">
+            <p>کلیه حقوق مادی و معنوی برای سای اکسپلور محفوظ است. © ۱۴۰۳</p>
+            <p style="margin-top: 10px; font-size: 13px;">
+                <a href="#" style="color: #7F7F7F; margin: 0 10px;">قوانین و مقررات</a> | 
+                <a href="#" style="color: #7F7F7F; margin: 0 10px;">درباره ما</a> | 
+                <a href="#" style="color: #7F7F7F; margin: 0 10px;">تماس با ما</a>
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        // تابع برای منوی هدر
+        function toggleMenu() {
+            const menu = document.getElementById('menuDropdown');
+            menu.classList.toggle('active');
+        }
+        
+        // بستن منو با کلیک خارج از آن
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('menuDropdown');
+            const toggle = document.querySelector('.menu-toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('active');
+            }
+        });
+        
+        // فعال کردن جست‌وجو با Enter
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.search-input').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    searchNow();
+                }
+            });
+            
+            // فعال کردن دکمه جست‌وجو
+            document.querySelector('.search-button').addEventListener('click', searchNow);
+        });
+        
+        function searchNow() {
+            const query = document.querySelector('.search-input').value;
+            if (query.trim() !== '') {
+                console.log('جست‌وجو برای:', query);
+                alert(`جست‌وجو برای "${query}" انجام شد`);
+            }
+        }
+        
+        // اسکریپت برای تعامل‌های صفحه
+        
+        // دکمه دانلود غیرفعال
+        document.querySelector('.action-icon.disabled').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('متأسفانه متن کامل این مقاله در دسترس نمی‌باشد. برای دسترسی می‌توانید از طریق سایت رسمی ژورنال اقدام کنید.');
+        });
+        
+        // شبیه‌سازی استناد
+        document.querySelectorAll('.action-icon')[1].addEventListener('click', function() {
+            const citation = `رضایی، م.، و احمدی، ف. (۱۴۰۲). تأثیر شبکه‌های اجتماعی بر سلامت روان نوجوانان: یک مطالعه مروری. مجله روانشناسی بالینی ایران، ۱۵(۲)، ۲۵-۴۵.`;
+            navigator.clipboard.writeText(citation).then(() => {
+                alert('متن استناد در حافظه کپی شد!');
+            });
+        });
+        
+        // شبیه‌سازی اشتراک‌گذاری
+        document.querySelectorAll('.action-icon')[2].addEventListener('click', function() {
+            const url = window.location.href;
+            const title = document.title;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: title,
+                    text: 'این مقاله را در سای اکسپلور ببینید',
+                    url: url,
+                });
+            } else {
+                navigator.clipboard.writeText(url).then(() => {
+                    alert('لینک مقاله در حافظه کپی شد!');
+                });
+            }
+        });
+        
+        // شبیه‌سازی لایک
+        let liked = false;
+        document.querySelectorAll('.action-icon')[3].addEventListener('click', function() {
+            liked = !liked;
+            const icon = this.querySelector('i');
+            const text = this.querySelector('span');
+            
+            if (liked) {
+                icon.className = 'fas fa-heart';
+                this.style.color = '#E17A41';
+                text.textContent = 'لایک شد';
+            } else {
+                icon.className = 'far fa-heart';
+                this.style.color = '';
+                text.textContent = 'لایک';
+            }
+        });
+        
+        // شبیه‌سازی نظر
+        document.querySelectorAll('.action-icon')[4].addEventListener('click', function() {
+            const comment = prompt('نظر خود را درباره این مقاله وارد کنید:');
+            if (comment && comment.trim() !== '') {
+                alert('نظر شما با موفقیت ثبت شد!');
+            }
+        });
+    </script>
+</body>
+</html>

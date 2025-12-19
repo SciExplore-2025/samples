@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نمونه‌های طراحی صفحه اطلاعات مقاله - سای اکسپلور</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Vazirmatn', sans-serif;
+        }
+        
+        body {
+            background-color: #F6F6F6;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid #FCB42D;
+        }
+        
+        .logo {
+            font-size: 36px;
+            color: #E17A41;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            color: #333;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+        
+        .subtitle {
+            color: #7F7F7F;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+        .intro {
+            background-color: #FFF6E7;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            border-right: 4px solid #FCB42D;
+        }
+        
+        .intro h2 {
+            color: #E17A41;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .intro p {
+            color: #5A5A5A;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .intro ul {
+            color: #5A5A5A;
+            padding-right: 20px;
+            margin-top: 15px;
+        }
+        
+        .intro li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .cases-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .case-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            border: 2px solid #EEE;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .case-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border-color: #FEEBCA;
+        }
+        
+        .case-number {
+            background-color: #FCB42D;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .case-title {
+            color: #333;
+            font-size: 22px;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        .case-description {
+            color: #7F7F7F;
+            margin-bottom: 25px;
+            flex-grow: 1;
+            line-height: 1.7;
+        }
+        
+        .case-features {
+            margin-bottom: 25px;
+        }
+        
+        .case-features ul {
+            list-style: none;
+            padding-right: 0;
+        }
+        
+        .case-features li {
+            padding: 8px 0;
+            color: #5A5A5A;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid #F5F5F5;
+        }
+        
+        .case-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .case-features i {
+            color: #4CAF50;
+        }
+        
+        .case-link {
+            display: inline-block;
+            background-color: #E17A41;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s;
+            margin-top: auto;
+        }
+        
+        .case-link:hover {
+            background-color: #FCB42D;
+            transform: translateY(-2px);
+        }
+        
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #EEE;
+            color: #7F7F7F;
+        }
+        
+        .note {
+            background-color: #F0FFF0;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            border-right: 3px solid #4CAF50;
+        }
+        
+        .note h3 {
+            color: #2E7D32;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 26px;
+            }
+            
+            .cases-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-search"></i> سای اکسپلور
+            </div>
+            <h1>نمونه‌های طراحی صفحه اطلاعات کامل مقاله</h1>
+            <p class="subtitle">چهار حالت مختلف نمایش اطلاعات مقاله در سیستم مدیریت محتوای علمی</p>
+        </header>
+        
+        <section class="intro">
+            <h2><i class="fas fa-info-circle"></i> درباره این نمونه‌ها</h2>
+            <p>این مجموعه شامل چهار طراحی مختلف برای صفحه نمایش اطلاعات کامل مقالات علمی است که در سیستم "سای اکسپلور" استفاده خواهد شد. هر حالت شرایط خاصی از مقالات را پوشش می‌دهد تا کارفرما بتواند قابلیت‌های سیستم را به طور کامل مشاهده کند.</p>
+            
+            <p><strong>اهداف این نمایش:</strong></p>
+            <ul>
+                <li>نمایش انعطاف‌پذیری سیستم در برابر انواع مختلف مقالات</li>
+                <li>بررسی کاربرپسندی و تجربه کاربری در شرایط مختلف</li>
+                <li>ارائه دیدگاه کلی از یکپارچگی طراحی در همه حالات</li>
+                <li>تأیید پالت رنگ و المان‌های طراحی مشترک</li>
+            </ul>
+            
+            <div class="note">
+                <h3><i class="fas fa-lightbulb"></i> نکته فنی</h3>
+                <p>همه صفحات از یک هدر مشترک، پالت رنگ یکسان و المان‌های طراحی سازگار استفاده می‌کنند. این ثبات در تمام بخش‌های سیستم حفظ خواهد شد.</p>
+            </div>
+        </section>
+        
+        <section class="cases-container">
+            <!-- حالت ۱ -->
+            <div class="case-card">
+                <div class="case-number">۱</div>
+                <h3 class="case-title">مقاله بدون دسترسی به متن کامل</h3>
+                <p class="case-description">نمایش مقاله‌ای که تحت اشتراک ژورنال منتشر شده و متن کامل آن در دسترس نیست. این حالت مدیریت محدودیت‌های دسترسی را نشان می‌دهد.</p>
+                
+                <div class="case-features">
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> اعلان عدم دسترسی</li>
+                        <li><i class="fas fa-check-circle"></i> دکمه دانلود غیرفعال</li>
+                        <li><i class="fas fa-check-circle"></i> راهنمای دسترسی جایگزین</li>
+                        <li><i class="fas fa-check-circle"></i> نمایش اطلاعات محدود</li>
+                    </ul>
+                </div>
+                
+                <a href="cases/case1-no-access.html" class="case-link">
+                    <i class="fas fa-external-link-alt"></i> مشاهده حالت اول
+                </a>
+            </div>
+            
+            <!-- حالت ۲ -->
+            <div class="case-card">
+                <div class="case-number">۲</div>
+                <h3 class="case-title">مقاله با دسترسی آزاد کامل</h3>
+                <p class="case-description">نمایش مقاله Open Access با متن کامل قابل دانلود. این حالت امکانات کامل سیستم را نمایش می‌دهد.</p>
+                
+                <div class="case-features">
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> دانلود مستقیم PDF</li>
+                        <li><i class="fas fa-check-circle"></i> نمایش مجوز Creative Commons</li>
+                        <li><i class="fas fa-check-circle"></i> آمار تعامل کاربران</li>
+                        <li><i class="fas fa-check-circle"></i> تمام امکانات تعاملی</li>
+                    </ul>
+                </div>
+                
+                <a href="cases/case2-open-access.html" class="case-link">
+                    <i class="fas fa-external-link-alt"></i> مشاهده حالت دوم
+                </a>
+            </div>
+            
+            <!-- حالت ۳ -->
+            <div class="case-card">
+                <div class="case-number">۳</div>
+                <h3 class="case-title">مقاله دو زبانه (فارسی/انگلیسی)</h3>
+                <p class="case-description">نمایش مقاله‌ای که به دو زبان منتشر شده است. این حالت پشتیبانی سیستم از محتوای چندزبانه را نشان می‌دهد.</p>
+                
+                <div class="case-features">
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> عنوان دو زبانه</li>
+                        <li><i class="fas fa-check-circle"></i> چکیده فارسی و انگلیسی</li>
+                        <li><i class="fas fa-check-circle"></i> کلمات کلیدی دو زبانه</li>
+                        <li><i class="fas fa-check-circle"></i> قابلیت تغییر زبان</li>
+                    </ul>
+                </div>
+                
+                <a href="cases/case3-bilingual.html" class="case-link">
+                    <i class="fas fa-external-link-alt"></i> مشاهده حالت سوم
+                </a>
+            </div>
+            
+            <!-- حالت ۴ -->
+            <div class="case-card">
+                <div class="case-number">۴</div>
+                <h3 class="case-title">مقاله چند نویسنده با پروفایل متفاوت</h3>
+                <p class="case-description">نمایش مقاله‌ای با چندین نویسنده که برخی دارای پروفایل در سایت هستند و برخی نه.</p>
+                
+                <div class="case-features">
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> لیست چند نویسنده‌ای</li>
+                        <li><i class="fas fa-check-circle"></i> تفکیک نویسندگان با پروفایل</li>
+                        <li><i class="fas fa-check-circle"></i> نمایش نویسنده مسئول</li>
+                        <li><i class="fas fa-check-circle"></i> مدیریت اطلاعات نویسندگان</li>
+                    </ul>
+                </div>
+                
+                <a href="cases/case4-multi-authors.html" class="case-link">
+                    <i class="fas fa-external-link-alt"></i> مشاهده حالت چهارم
+                </a>
+            </div>
+        </section>
+        
+        <footer>
+            <p>طراحی شده برای سیستم مدیریت محتوای علمی "سای اکسپلور"</p>
+            <p style="margin-top: 10px; font-size: 14px; color: #7F7F7F;">
+                <i class="fas fa-code"></i> توسعه‌یافته با HTML5, CSS3 & JavaScript
+            </p>
+            <p style="margin-top: 5px; font-size: 14px; color: #7F7F7F;">
+                <i class="fas fa-palette"></i> پالت رنگ: نارنجی (#E17A41, #FCB42D) و خاکستری‌های مکمل
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
